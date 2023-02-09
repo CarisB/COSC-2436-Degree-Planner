@@ -1,0 +1,26 @@
+{
+  "students": [
+    {
+      "id": 10001,
+      "name": "Christopher Baek",
+      "majorId": 10001,
+      "transcript": [
+        {
+          "id": 2436301,
+          "grade": 100
+        }
+      ]
+    },
+    {
+      "id": 10002,
+      "name": "Test McTest",
+      "majorId": 10001,
+      "transcript": [
+        {
+          "id": 2436301,
+          "grade": 78
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "majors": [
+    {
+      "id": 10001,
+      "name": "Test Major",
+      "core": [
+        2436301
+      ],
+      "elective": []
+    }
+  ]
+}

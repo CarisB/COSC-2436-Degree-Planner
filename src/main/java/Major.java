@@ -1,11 +1,23 @@
-import java.util.List;
+import java.util.Arrays;
 
 public class Major {
+    int id;
     String name;
-    List<Course> core;
-    List<Course> elective;
+    Course[] core;
+    Course[] elective;
 
+    public int getId() { return id; }
     public String getName() { return name; }
-    public List<Course> getCore() { return core; }
-    public List<Course> getElective() { return elective; }
+    public Course[] getCore() { return core; }
+    public Course[] getElective() { return elective; }
+
+    public Major(int _id,
+                 String _name,
+                 Course[] _core,
+                 Course[] _elective) {
+        id = _id;
+        name = _name;
+        core = _core;
+        elective = _elective;
+    }
 }
