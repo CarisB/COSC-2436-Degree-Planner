@@ -1,16 +1,14 @@
-public class Main {
-    public static void main(String[] args) {
-        Course course = new Course(
-                10001,
-                "Test Course",
-                "This is a test course.",
-                4,
-                null
-        );
+import java.util.Map;
 
-        System.out.println(course.getId());
-        System.out.println(course.getName());
-        System.out.println(course.getDescription());
-        System.out.println(course.getCredits());
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Map<Integer, Course> courseMap = CourseFactory.CreateCourseMapFromJSON("courses.json");
+
+        courseMap.forEach((id, course) -> {
+            System.out.println(course.getId());
+            System.out.println(course.getName());
+            System.out.println(course.getDescription());
+            System.out.println(course.getCredits());
+        });
     }
 }
