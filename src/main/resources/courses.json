@@ -1,20 +1,32 @@
 {
   "courses": [
     {
-      "id": 1234567,
+      "id": 10001,
       "name": "Test Course I",
       "description": "This is a test course.",
       "credits": 4,
       "prereqs": []
     },
     {
-      "id": 2436301,
+      "id": 20001,
+      "name": "Programming Fundamentals I",
+      "description": "The first course in programming fundamentals.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 20002,
+      "name": "Programming Fundamentals II",
+      "description": "The second course in programming fundamentals.",
+      "credits": 4,
+      "prereqs": [ 20001 ]
+    },
+    {
+      "id": 20003,
       "name": "Programming Fundamentals III",
       "description": "The third course in programming fundamentals.",
       "credits": 4,
-      "prereqs": [
-        2336301
-      ]
+      "prereqs": [ 20002 ]
     }
   ]
 }

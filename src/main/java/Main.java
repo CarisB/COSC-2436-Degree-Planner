@@ -19,14 +19,15 @@ public class Main {
         stream = Main.class.getClassLoader().getResourceAsStream("students.json");
         var studentMap = Maps.SetStudentMap(DataCreator.CreateStudentMapFromJSON(stream));
 
-        courseMap.forEach((id, course) -> {
-            System.out.println(course.getId());
-            System.out.println(course.getName());
-            System.out.println(course.getDescription());
-            System.out.println(course.getCredits());
-            for (int i = 0; i < course.getPrereqs().length; i++) {
-                System.out.println("Prereq: " + course.getPrereqs()[i]);
-            }
+        studentMap.forEach((id, student) -> {
+            System.out.println("ID: " + student.getId());
+            System.out.println("Name: " + student.getName());
+            System.out.println("Major: " + student.getMajor().name);
+            System.out.println("Transcript:");
+
+            student.getTranscript().forEach((course, grade) ->
+                    System.out.println("- " + course.name + ": " + grade));
+
             System.out.println();
         });
     }

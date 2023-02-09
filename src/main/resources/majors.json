@@ -3,9 +3,13 @@
     {
       "id": 10001,
       "name": "Test Major",
-      "core": [
-        2436301
-      ],
+      "core": [],
+      "elective": []
+    },
+    {
+      "id": 20001,
+      "name": "Computer Science",
+      "core": [ 20001, 20002, 20003 ],
       "elective": []
     }
   ]

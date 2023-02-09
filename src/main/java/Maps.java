@@ -31,7 +31,7 @@ public class Maps {
         Course course = courses.get(_id);
 
         if (course == null)
-            throw new Exception("Course not found in Maps.courses");
+            throw new Exception("Course " + _id + " not found in Maps.courses");
 
         return course;
     }
@@ -43,7 +43,7 @@ public class Maps {
         Major major = majors.get(_id);
 
         if (major == null)
-            throw new Exception("Major not found in Maps.majors");
+            throw new Exception("Major " + _id + "not found in Maps.majors");
 
         return major;
     }
