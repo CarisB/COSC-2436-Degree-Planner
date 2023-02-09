@@ -1,18 +1,24 @@
-import java.nio.file.Files;
 import java.util.Map;
 import java.util.HashMap;
-import java.nio.file.Path;
+import java.io.*;
 
 import org.json.*;
 
 public class CourseFactory {
-    public static Map<Integer, Course> CreateCourseMapFromJSON(String _path)
+    public static Map<Integer, Course> CreateCourseMapFromJSON(InputStream _inputStream)
         throws Exception
     {
         Map<Integer, Course> map = new HashMap<>();
 
-        Path path = Path.of(_path);
-        var json = new JSONObject(Files.readString(path));
+        var reader = new BufferedReader(new InputStreamReader(_inputStream));
+        String line;
+        var responseStrBuilder = new StringBuilder();
+        while ((line = reader.readLine()) != null) {
+            responseStrBuilder.append(line);
+        }
+        _inputStream.close();
+
+        var json = new JSONObject(responseStrBuilder.toString());
 
         var courses = json.getJSONArray("courses");
         for (int i = 0; i < courses.length(); i++) {
