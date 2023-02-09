@@ -11,7 +11,9 @@
       "name": "Christopher Baek",
       "majorId": 20001,
       "transcript": [
-        { "id": 20001, "grade": 100 }
+        { "id": 20001, "grade": 100 },
+        { "id": 20002, "grade": 100 },
+        { "id": 20003, "grade": 100 }
       ]
     }
   ]

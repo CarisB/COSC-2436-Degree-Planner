@@ -27,6 +27,27 @@
       "description": "The third course in programming fundamentals.",
       "credits": 4,
       "prereqs": [ 20002 ]
+    },
+    {
+      "id": 30001,
+      "name": "Calculus I",
+      "description": "The first course in Calculus.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 30002,
+      "name": "Calculus II",
+      "description": "The second course in Calculus.",
+      "credits": 4,
+      "prereqs": [ 30001 ]
+    },
+    {
+      "id": 30003,
+      "name": "Calculus III",
+      "description": "The third course in Calculus.",
+      "credits": 4,
+      "prereqs": [ 30002 ]
     }
   ]
 }
