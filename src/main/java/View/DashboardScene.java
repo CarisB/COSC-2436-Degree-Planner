@@ -53,10 +53,10 @@ public class DashboardScene implements IScene {
         int option = scn.nextInt();
 
         switch (option) {
-            case 1: SceneManager.Next(new InfoScene()); break;
-            case 2: SceneManager.Next(new DegreeScene()); break;
-            case 3: SceneManager.Next(new CourseListScene()); break;
-            default: Retry(); break;
+            case 1 -> SceneManager.Next(new InfoScene());
+            case 2 -> SceneManager.Next(new DegreeScene());
+            case 3 -> SceneManager.Next(new CourseListScene());
+            default -> Retry();
         }
     }
 
