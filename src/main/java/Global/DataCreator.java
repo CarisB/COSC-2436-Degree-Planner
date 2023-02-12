@@ -4,9 +4,9 @@ import java.util.Map;
 import java.util.HashMap;
 import java.io.*;
 
-import Classes.Course;
-import Classes.Major;
-import Classes.Student;
+import Model.Course;
+import Model.Major;
+import Model.Student;
 import org.json.*;
 
 public class DataCreator {
