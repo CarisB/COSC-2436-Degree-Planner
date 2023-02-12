@@ -3,13 +3,13 @@
     {
       "id": 10001,
       "name": "Test McTest",
-      "majorId": 10001,
+      "degreeId": 10001,
       "transcript": []
     },
     {
       "id": 10002,
       "name": "Christopher Baek",
-      "majorId": 20001,
+      "degreeId": 20001,
       "transcript": [
         { "id": 20001, "grade": 100 },
         { "id": 20002, "grade": 100 },

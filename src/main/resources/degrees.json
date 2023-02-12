@@ -1,14 +1,14 @@
 {
-  "majors": [
+  "degrees": [
     {
       "id": 10001,
-      "name": "Test Major",
+      "name": "Test Degree",
       "core": [],
       "elective": []
     },
     {
       "id": 20001,
-      "name": "Computer Science",
+      "name": "Computer Science, A.S.",
       "core": [ 20001, 20002, 20003, 30001, 30002 ],
       "elective": [ 30003 ]
     }

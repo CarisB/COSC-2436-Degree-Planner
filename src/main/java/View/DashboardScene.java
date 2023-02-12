@@ -30,7 +30,8 @@ public class DashboardScene implements IScene {
     }
 
     void DisplayMenu() {
-        System.out.println(String.format(WELCOME_MSG, student.getName()));
+        System.out.printf(WELCOME_MSG, student.getName());
+        System.out.println();
 
         int barLength = INFO_OPTION.length()
                 + DEGREE_OPTION.length()
@@ -52,6 +53,7 @@ public class DashboardScene implements IScene {
         Scanner scn = new Scanner(System.in);
         int option = scn.nextInt();
 
+        // Load next Scene
         switch (option) {
             case 1 -> SceneManager.Next(new InfoScene());
             case 2 -> SceneManager.Next(new DegreeScene());

@@ -15,7 +15,7 @@ import java.io.InputStream;
 
 public class Main {
     static final String COURSES_PATH = "courses.json";
-    static final String MAJORS_PATH = "majors.json";
+    static final String DEGREES_PATH = "degrees.json";
     static final String STUDENTS_PATH = "students.json";
     static final IScene INITIAL_SCENE = new LoginScene();
 
@@ -23,8 +23,8 @@ public class Main {
         InputStream stream;
         stream = Main.class.getClassLoader().getResourceAsStream(COURSES_PATH);
         Maps.SetCourseMap(DataCreator.CreateCourseMapFromJSON(stream));
-        stream = Main.class.getClassLoader().getResourceAsStream(MAJORS_PATH);
-        Maps.SetMajorMap(DataCreator.CreateMajorMapFromJSON(stream));
+        stream = Main.class.getClassLoader().getResourceAsStream(DEGREES_PATH);
+        Maps.SetDegreeMap(DataCreator.CreateDegreeMapFromJSON(stream));
         stream = Main.class.getClassLoader().getResourceAsStream(STUDENTS_PATH);
         Maps.SetStudentMap(DataCreator.CreateStudentMapFromJSON(stream));
     }

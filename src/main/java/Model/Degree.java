@@ -1,6 +1,6 @@
 package Model;
 
-public class Major {
+public class Degree {
     int id;
     String name;
     Course[] core;
@@ -11,10 +11,10 @@ public class Major {
     public Course[] getCore() { return core; }
     public Course[] getElective() { return elective; }
 
-    public Major(int _id,
-                 String _name,
-                 Course[] _core,
-                 Course[] _elective) {
+    public Degree(int _id,
+                  String _name,
+                  Course[] _core,
+                  Course[] _elective) {
         id = _id;
         name = _name;
         core = _core;

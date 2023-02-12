@@ -1,12 +1,9 @@
 package Global;
 
+import Model.*;
 import java.util.Map;
 import java.util.HashMap;
 import java.io.*;
-
-import Model.Course;
-import Model.Major;
-import Model.Student;
 import org.json.*;
 
 public class DataCreator {
@@ -18,16 +15,16 @@ public class DataCreator {
     static final String COURSE_CREDITS = "credits";
     static final String COURSE_PREREQS = "prereqs";
 
-    static final String MAJOR_ARRAY = "majors";
-    static final String MAJOR_ID = "id";
-    static final String MAJOR_NAME = "name";
-    static final String MAJOR_CORE = "core";
-    static final String MAJOR_ELECTIVE = "elective";
+    static final String DEGREE_ARRAY = "degrees";
+    static final String DEGREE_ID = "id";
+    static final String DEGREE_NAME = "name";
+    static final String DEGREE_CORE = "core";
+    static final String DEGREE_ELECTIVE = "elective";
 
     static final String STUDENT_ARRAY = "students";
     static final String STUDENT_ID = "id";
     static final String STUDENT_NAME = "name";
-    static final String STUDENT_MAJOR_ID = "majorId";
+    static final String STUDENT_DEGREE_ID = "degreeId";
     static final String STUDENT_TRANSCRIPT = "transcript";
     static final String STUDENT_TRANSCRIPT_COURSE_ID = "id";
     static final String STUDENT_TRANSCRIPT_COURSE_GRADE = "grade";
@@ -54,9 +51,7 @@ public class DataCreator {
         return CreateCourseMapFromJSON(json);
     }
 
-    public static Map<Integer, Course> CreateCourseMapFromJSON(String _json)
-            throws Exception
-    {
+    public static Map<Integer, Course> CreateCourseMapFromJSON(String _json) {
         Map<Integer, Course> map = new HashMap<>();
 
         var jsonObj = new JSONObject(_json);
@@ -83,28 +78,28 @@ public class DataCreator {
         return map;
     }
 
-    public static Map<Integer, Major> CreateMajorMapFromJSON(InputStream _stream)
+    public static Map<Integer, Degree> CreateDegreeMapFromJSON(InputStream _stream)
             throws Exception
     {
         String json = ConvertInputStreamToString(_stream);
-        return CreateMajorMapFromJSON(json);
+        return CreateDegreeMapFromJSON(json);
     }
 
-    public static Map<Integer, Major> CreateMajorMapFromJSON(String _json)
+    public static Map<Integer, Degree> CreateDegreeMapFromJSON(String _json)
             throws Exception
     {
-        Map<Integer, Major> map = new HashMap<>();
+        Map<Integer, Degree> map = new HashMap<>();
 
         var jsonObj = new JSONObject(_json);
-        var majors = jsonObj.getJSONArray(MAJOR_ARRAY);
+        var degrees = jsonObj.getJSONArray(DEGREE_ARRAY);
 
-        for (int i = 0; i < majors.length(); i++) {
-            var major = majors.getJSONObject(i);
+        for (int i = 0; i < degrees.length(); i++) {
+            var degree = degrees.getJSONObject(i);
 
-            int id = major.getInt(MAJOR_ID);
-            String name = major.getString(MAJOR_NAME);
+            int id = degree.getInt(DEGREE_ID);
+            String name = degree.getString(DEGREE_NAME);
 
-            var coreArr = major.getJSONArray(MAJOR_CORE);
+            var coreArr = degree.getJSONArray(DEGREE_CORE);
             Course[] core = new Course[coreArr.length()];
 
             for (int j = 0; j < coreArr.length(); j++) {
@@ -112,7 +107,7 @@ public class DataCreator {
                 core[j] = Maps.GetCourseById(courseId);
             }
 
-            var electiveArr = major.getJSONArray(MAJOR_ELECTIVE);
+            var electiveArr = degree.getJSONArray(DEGREE_ELECTIVE);
             Course[] elective = new Course[electiveArr.length()];
 
             for (int j = 0; j < electiveArr.length(); j++) {
@@ -120,7 +115,7 @@ public class DataCreator {
                 elective[j] = Maps.GetCourseById(courseId);
             }
 
-            map.put(id, new Major(id, name, core, elective));
+            map.put(id, new Degree(id, name, core, elective));
         }
 
         return map;
@@ -146,7 +141,7 @@ public class DataCreator {
 
             int id = student.getInt(STUDENT_ID);
             String name = student.getString(STUDENT_NAME);
-            int majorId = student.getInt(STUDENT_MAJOR_ID);
+            int degreeId = student.getInt(STUDENT_DEGREE_ID);
 
             var arr = student.getJSONArray(STUDENT_TRANSCRIPT);
             Map<Course, Integer> transcript = new HashMap<>();
@@ -159,7 +154,7 @@ public class DataCreator {
                 transcript.put(Maps.GetCourseById(courseId), courseGrade);
             }
 
-            map.put(id, new Student(id, name, Maps.GetMajorById(majorId), transcript));
+            map.put(id, new Student(id, name, Maps.GetDegreeById(degreeId), transcript));
         }
 
         return map;
