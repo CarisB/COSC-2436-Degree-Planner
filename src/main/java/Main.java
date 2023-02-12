@@ -7,6 +7,8 @@
  * @since   2023-02-08
  */
 
+import UI.Scene;
+
 import java.io.InputStream;
 
 public class Main {
