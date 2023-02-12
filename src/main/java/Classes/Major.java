@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package Classes;
 
 public class Major {
     int id;

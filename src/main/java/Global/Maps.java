@@ -1,3 +1,8 @@
+package Global;
+
+import Classes.Course;
+import Classes.Major;
+import Classes.Student;
 import java.util.Map;
 
 public class Maps {
@@ -26,7 +31,7 @@ public class Maps {
 
     public static Course GetCourseById(int _id) throws Exception {
         if (courses == null)
-            throw new Exception("Maps.courses cannot be null");
+            throw new Exception("MMaps.courses cannot be null");
 
         Course course = courses.get(_id);
 
@@ -46,5 +51,17 @@ public class Maps {
             throw new Exception("Major " + _id + "not found in Maps.majors");
 
         return major;
+    }
+
+    public static Student GetStudentById(int _id) throws Exception {
+        if (students == null)
+            throw new Exception("Maps.students cannot be null");
+
+        Student student = students.get(_id);
+
+        if (student == null)
+            throw new Exception("Student " + _id + " not found in Maps.students");
+
+        return student;
     }
 }

@@ -1,3 +1,7 @@
+package Classes;
+
+import Helpers.Enums.CourseFormat;
+
 public class CourseOffering {
     Course course;
     String time;
