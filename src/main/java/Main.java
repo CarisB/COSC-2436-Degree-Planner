@@ -7,9 +7,7 @@
  * @since   2023-02-08
  */
 
-import Global.DataCreator;
-import Global.Maps;
-import Global.SceneManager;
+import Global.*;
 import View.*;
 import java.io.InputStream;
 
@@ -21,6 +19,7 @@ public class Main {
 
     static boolean isRunning = true;
 
+    // Loads up the external resources and sets the global data maps
     static void LoadData() throws Exception {
         InputStream stream;
         stream = Main.class.getClassLoader().getResourceAsStream(COURSES_PATH);

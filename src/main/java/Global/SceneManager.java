@@ -3,6 +3,13 @@ package Global;
 import View.IScene;
 import java.io.IOException;
 
+/*
+Scene Manager uses a "next scene"->Init() system invoked by the main program loop
+as opposed to directly invoking Init() on currentScene. This allows the deprecated Scene
+to properly go out-of-scope for the GC instead of staying in memory and causing leaks.
+Classes should call Next() to switch Scenes.
+*/
+
 public class SceneManager {
     static IScene currentScene;
     static IScene nextScene;
@@ -10,6 +17,7 @@ public class SceneManager {
     static void Clear()
             throws IOException, InterruptedException
     {
+        // Clears the cmd shell (Windows only)
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }
 
