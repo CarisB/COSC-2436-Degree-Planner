@@ -11,6 +11,7 @@ public class DashboardScene implements IScene {
     final String INFO_OPTION = "1) View personal information";
     final String DEGREE_OPTION = "2) View degree information";
     final String COURSE_LIST_OPTION = "3) View available courses";
+    final String LOGOUT_OPTION = "4) Log out";
     final String INPUT_PROMPT = "Please select an option: ";
     final String INVALID_OPTION_ERROR = "Please enter a valid option.";
     final String RETRY_MSG = "Press ENTER to continue.";
@@ -32,21 +33,29 @@ public class DashboardScene implements IScene {
     void DisplayMenu() {
         System.out.printf(WELCOME_MSG, student.getName());
         System.out.println();
-
-        int barLength = INFO_OPTION.length()
-                + DEGREE_OPTION.length()
-                + COURSE_LIST_OPTION.length()
-                + (OPTION_SEPARATOR.length() * 2);
-        for (int i = 0; i < barLength; i++) { System.out.print("="); }
-
-        System.out.println();
-        System.out.print(INFO_OPTION);
-        System.out.print(OPTION_SEPARATOR);
-        System.out.print(DEGREE_OPTION);
-        System.out.print(OPTION_SEPARATOR);
-        System.out.print(COURSE_LIST_OPTION);
-        System.out.println();
+        DrawBar();
+        System.out.println(
+                INFO_OPTION +
+                OPTION_SEPARATOR +
+                DEGREE_OPTION +
+                OPTION_SEPARATOR +
+                COURSE_LIST_OPTION +
+                OPTION_SEPARATOR +
+                LOGOUT_OPTION);
+        DrawBar();
         System.out.print(INPUT_PROMPT);
+    }
+
+    void DrawBar() {
+        int barLength =
+                INFO_OPTION.length() +
+                DEGREE_OPTION.length() +
+                COURSE_LIST_OPTION.length() +
+                LOGOUT_OPTION.length() +
+                (OPTION_SEPARATOR.length() * 3);
+
+        for (int i = 0; i < barLength; i++) { System.out.print("="); }
+        System.out.println();
     }
 
     void WaitForInput() throws Exception {
@@ -58,6 +67,7 @@ public class DashboardScene implements IScene {
             case 1 -> SceneManager.Next(new InfoScene());
             case 2 -> SceneManager.Next(new DegreeScene());
             case 3 -> SceneManager.Next(new CourseListScene());
+            case 4 -> SceneManager.Next(new LoginScene());
             default -> Retry();
         }
     }

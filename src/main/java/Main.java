@@ -19,6 +19,8 @@ public class Main {
     static final String STUDENTS_PATH = "students.json";
     static final IScene INITIAL_SCENE = new LoginScene();
 
+    static boolean isRunning = true;
+
     static void LoadData() throws Exception {
         InputStream stream;
         stream = Main.class.getClassLoader().getResourceAsStream(COURSES_PATH);
@@ -35,8 +37,10 @@ public class Main {
         SceneManager.Next(INITIAL_SCENE);
 
         // Main program loop
-        while (true) {
+        while (isRunning) {
             SceneManager.Init();
         }
     }
+
+    public static void Exit() { isRunning = false; }
 }
