@@ -18,7 +18,12 @@ public class SceneManager {
             throws IOException, InterruptedException
     {
         // Clears the cmd shell (Windows only)
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        if (System.getProperty("os.name").contains("Windows"))
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        else {  // For other platforms
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+        }
     }
 
     public static void Next(IScene _scene) { nextScene = _scene; }

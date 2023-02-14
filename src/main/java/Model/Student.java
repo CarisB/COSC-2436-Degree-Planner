@@ -5,21 +5,21 @@ import java.util.Map;
 public class Student {
     int id;
     String name;
-    Degree major;
+    Degree degree;
     Map<Course, Integer> transcript;
 
     public int getId() { return id; }
     public String getName() { return name; }
-    public Degree getMajor() { return major; }
+    public Degree getDegree() { return degree; }
     public Map<Course, Integer> getTranscript() { return transcript; }
 
     public Student(int _id,
                   String _name,
-                  Degree _major,
+                  Degree _degree,
                   Map<Course, Integer> _transcript) {
         id = _id;
         name = _name;
-        major = _major;
+        degree = _degree;
         transcript = _transcript;
     }
 }

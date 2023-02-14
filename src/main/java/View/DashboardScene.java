@@ -54,8 +54,7 @@ public class DashboardScene implements IScene {
                 LOGOUT_OPTION.length() +
                 (OPTION_SEPARATOR.length() * 3);
 
-        for (int i = 0; i < barLength; i++) { System.out.print("="); }
-        System.out.println();
+        System.out.println("=".repeat(barLength));
     }
 
     void WaitForInput() throws Exception {
@@ -64,7 +63,7 @@ public class DashboardScene implements IScene {
 
         // Load next Scene
         switch (option) {
-            case 1 -> SceneManager.Next(new InfoScene());
+            case 1 -> SceneManager.Next(new InfoScene(student));
             case 2 -> SceneManager.Next(new DegreeScene());
             case 3 -> SceneManager.Next(new CourseListScene());
             case 4 -> SceneManager.Next(new LoginScene());
