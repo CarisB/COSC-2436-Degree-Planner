@@ -7,6 +7,12 @@
       "transcript": []
     },
     {
+      "id": 10003,
+      "name": "Test McTest 2",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
       "id": 10002,
       "name": "Christopher Baek",
       "degreeId": 20001,
