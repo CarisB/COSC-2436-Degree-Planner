@@ -1,20 +1,68 @@
 {
   "students": [
     {
-      "id": 10001,
-      "name": "Test McTest",
+      "id": 14581,
+      "name": "Richard Torres",
       "degreeId": 10001,
       "transcript": []
     },
     {
-      "id": 10003,
-      "name": "Test McTest 2",
+      "id": 17412,
+      "name": "Jimmy Harris",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 10475,
+      "name": "Paul Russell",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 11306,
+      "name": "Amanda Walker",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 13023,
+      "name": "Linda Jones",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 10403,
+      "name": "Susan Nelson",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 10909,
+      "name": "Gloria Wright",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 18025,
+      "name": "Michael Sanchez",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 19013,
+      "name": "Gregory Ramirez",
+      "degreeId": 10001,
+      "transcript": []
+    },
+    {
+      "id": 15504,
+      "name": "Sara Rodriguez",
       "degreeId": 10001,
       "transcript": []
     },
     {
       "id": 10002,
-      "name": "Christopher Baek",
+      "name": "Christopher Bailey",
       "degreeId": 20001,
       "transcript": [
         { "id": 20001, "grade": 100 },
