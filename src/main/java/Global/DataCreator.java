@@ -18,6 +18,9 @@ public class DataCreator {
     static final String DEGREE_ARRAY = "degrees";
     static final String DEGREE_ID = "id";
     static final String DEGREE_NAME = "name";
+    static final String DEGREE_CORE_CREDITS = "coreCredits";
+    static final String DEGREE_MAJOR_REQ_CREDITS = "majorReqCredits";
+    static final String DEGREE_ELECTIVE_CREDITS = "electiveCredits";
     static final String DEGREE_CORE = "core";
     static final String DEGREE_MAJOR_REQ = "majorReq";
     static final String DEGREE_ELECTIVE = "elective";
@@ -70,6 +73,9 @@ public class DataCreator {
 
             int id = degree.getInt(DEGREE_ID);
             String name = degree.getString(DEGREE_NAME);
+            int coreCredits = degree.getInt(DEGREE_CORE_CREDITS);
+            int majorReqCredits = degree.getInt(DEGREE_MAJOR_REQ_CREDITS);
+            int electiveCredits = degree.getInt(DEGREE_ELECTIVE_CREDITS);
 
             JSONArray arr;
 
@@ -97,7 +103,15 @@ public class DataCreator {
                 elective[j] = Maps.GetCourseById(courseId);
             }
 
-            map.put(id, new Degree(id, name, core, majorReq, elective));
+            map.put(id, new Degree(
+                    id,
+                    name,
+                    coreCredits,
+                    majorReqCredits,
+                    electiveCredits,
+                    core,
+                    majorReq,
+                    elective));
         }
 
         return map;

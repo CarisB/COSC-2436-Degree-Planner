@@ -3,6 +3,9 @@ package Model;
 public class Degree {
     int id;
     String name;
+    int coreCredits;
+    int majorReqCredits;
+    int electiveCredits;
     Course[] core;
     Course[] majorReq;
     Course[] elective;
@@ -15,11 +18,17 @@ public class Degree {
 
     public Degree(int _id,
                   String _name,
+                  int _coreCredits,
+                  int _majorReqCredits,
+                  int _electiveCredits,
                   Course[] _core,
                   Course[] _majorReq,
                   Course[] _elective) {
         id = _id;
         name = _name;
+        coreCredits = _coreCredits;
+        majorReqCredits = _majorReqCredits;
+        electiveCredits = _electiveCredits;
         core = _core;
         majorReq = _majorReq;
         elective = _elective;

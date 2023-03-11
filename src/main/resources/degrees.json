@@ -3,6 +3,9 @@
     {
       "id": 10001,
       "name": "Test Degree",
+      "coreCredits": 36,
+      "majorReqCredits": 18,
+      "electiveCredits": 6,
       "core": [],
       "majorReq": [],
       "elective": []
@@ -10,6 +13,9 @@
     {
       "id": 20001,
       "name": "Computer Science, A.S.",
+      "coreCredits": 36,
+      "majorReqCredits": 18,
+      "electiveCredits": 6,
       "core": [ 20001, 20002, 20003, 30001, 30002 ],
       "majorReq": [],
       "elective": [ 30003 ]
