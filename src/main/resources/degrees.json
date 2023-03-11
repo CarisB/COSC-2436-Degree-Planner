@@ -4,12 +4,14 @@
       "id": 10001,
       "name": "Test Degree",
       "core": [],
+      "majorReq": [],
       "elective": []
     },
     {
       "id": 20001,
       "name": "Computer Science, A.S.",
       "core": [ 20001, 20002, 20003, 30001, 30002 ],
+      "majorReq": [],
       "elective": [ 30003 ]
     }
   ]
