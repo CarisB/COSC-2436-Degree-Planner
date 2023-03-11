@@ -7,6 +7,7 @@ public class InfoScene implements IScene {
     final String NULL_STUDENT_ERROR = "Cannot have a null Student!";
     final String INDENT_STRING = "    ";
     final String TRANSCRIPT_HEADER = "TRANSCRIPT";
+    final String CREDIT_HOURS = " SCH";
     final String RETURN_MSG = "[ Press ENTER to return to the Dashboard ]";
     final int PANEL_LENGTH = 100;
 
@@ -42,6 +43,8 @@ public class InfoScene implements IScene {
             System.out.print(course.getName());
             System.out.print(INDENT_STRING);
             System.out.print(grade);
+            System.out.print(INDENT_STRING);
+            System.out.print(course.getCredits() + CREDIT_HOURS);
             System.out.println();
         });
         DrawBar(PANEL_LENGTH, '=');
