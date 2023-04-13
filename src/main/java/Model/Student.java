@@ -1,12 +1,14 @@
 package Model;
 
 import java.util.Map;
+import java.util.ArrayList;
 
 public class Student {
     int id;
     String name;
     Degree degree;
     Map<Course, Integer> transcript;
+    ArrayList<CourseOffering> schedule;
 
     public int getId() { return id; }
     public String getName() { return name; }
@@ -21,5 +23,6 @@ public class Student {
         name = _name;
         degree = _degree;
         transcript = _transcript;
+        schedule = new ArrayList<>();
     }
 }
