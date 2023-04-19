@@ -1,0 +1,11 @@
+{
+  "courseOfferings": [
+    {
+      "courseID": 10001,
+      "date": "M/W/F",
+      "time": "12:00 PM - 1:45 PM",
+      "instructor": "Dr. Alice Graham",
+      "format": 1
+    }
+  ]
+}
