@@ -2,7 +2,7 @@
   "degrees": [
     {
       "id": 10001,
-      "name": "Test Degree",
+      "name": "Natural Science, A.S.",
       "coreCredits": 36,
       "majorReqCredits": 18,
       "electiveCredits": 6,
@@ -19,6 +19,56 @@
       "core": [ 20001, 20002, 20003, 30001, 30002 ],
       "majorReq": [],
       "elective": [ 30003 ]
+    },
+    {
+      "id": 30001,
+      "name": "Mathematics, A.S.",
+      "coreCredits": 36,
+      "majorReqCredits": 18,
+      "electiveCredits": 6,
+      "core": [],
+      "majorReq": [],
+      "elective": []
+    },
+    {
+      "id": 40001,
+      "name": "Fine Arts, A.A.",
+      "coreCredits": 36,
+      "majorReqCredits": 18,
+      "electiveCredits": 6,
+      "core": [],
+      "majorReq": [],
+      "elective": []
+    },
+    {
+      "id": 50001,
+      "name": "Music, A.A.",
+      "coreCredits": 36,
+      "majorReqCredits": 18,
+      "electiveCredits": 6,
+      "core": [],
+      "majorReq": [],
+      "elective": []
+    },
+    {
+      "id": 60001,
+      "name": "Business, A.A.",
+      "coreCredits": 36,
+      "majorReqCredits": 18,
+      "electiveCredits": 6,
+      "core": [],
+      "majorReq": [],
+      "elective": []
+    },
+    {
+      "id": 70001,
+      "name": "Criminal Justice, A.A.S.",
+      "coreCredits": 36,
+      "majorReqCredits": 18,
+      "electiveCredits": 6,
+      "core": [],
+      "majorReq": [],
+      "elective": []
     }
   ]
 }

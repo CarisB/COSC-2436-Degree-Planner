@@ -3,19 +3,23 @@
     {
       "id": 14581,
       "name": "Richard Torres",
-      "degreeId": 10001,
+      "degreeId": 40001,
       "transcript": []
     },
     {
       "id": 17412,
       "name": "Jimmy Harris",
-      "degreeId": 10001,
-      "transcript": []
+      "degreeId": 20001,
+      "transcript": [
+        { "id": 20001, "grade": 100 },
+        { "id": 20002, "grade": 100 },
+        { "id": 20003, "grade": 100 }
+      ]
     },
     {
       "id": 10475,
       "name": "Paul Russell",
-      "degreeId": 10001,
+      "degreeId": 30001,
       "transcript": []
     },
     {
@@ -27,31 +31,31 @@
     {
       "id": 13023,
       "name": "Linda Jones",
-      "degreeId": 10001,
+      "degreeId": 50001,
       "transcript": []
     },
     {
       "id": 10403,
       "name": "Susan Nelson",
-      "degreeId": 10001,
+      "degreeId": 70001,
       "transcript": []
     },
     {
       "id": 10909,
       "name": "Gloria Wright",
-      "degreeId": 10001,
+      "degreeId": 60001,
       "transcript": []
     },
     {
       "id": 18025,
       "name": "Michael Sanchez",
-      "degreeId": 10001,
+      "degreeId": 40001,
       "transcript": []
     },
     {
       "id": 19013,
       "name": "Gregory Ramirez",
-      "degreeId": 10001,
+      "degreeId": 70001,
       "transcript": []
     },
     {
