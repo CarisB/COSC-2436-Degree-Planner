@@ -48,6 +48,34 @@
       "description": "The third course in Calculus.",
       "credits": 4,
       "prereqs": [ 30002 ]
+    },
+    {
+      "id": 30004,
+      "name": "College Algebra",
+      "description": "Course in algebra.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 30005,
+      "name": "Algebra II",
+      "description": "Second Course in Algebra",
+      "credits": 4,
+      "prereqs": [ 30004 ]
+    },
+    {
+      "id": 30006,
+      "name": "Geometry I",
+      "description": "First course in Geometry.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 30007,
+      "name": "Geometry II",
+      "description": "Second course in Geometry.",
+      "credits": 4,
+      "prereqs": [ 30008 ]
     }
   ]
 }

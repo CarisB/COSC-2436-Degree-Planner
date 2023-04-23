@@ -1,10 +1,94 @@
 {
   "courseOfferings": [
     {
-      "courseID": 10001,
+      "courseID": 20001,
       "date": "M/W/F",
       "time": "12:00 PM - 1:45 PM",
       "instructor": "Dr. Alice Graham",
+      "format": 1
+    },
+    {
+      "courseID": 20001,
+      "date": "M/W/F",
+      "time": "12:00 PM - 1:45 PM",
+      "instructor": "Dr. Seldon Cooper",
+      "format": 0
+    },
+    {
+      "courseID": 20002,
+      "date": "M/W/F",
+      "time": "2:00 PM -3:45 PM",
+      "instructor": "Dr. Alice Graham",
+      "format": 1
+    },
+    {
+      "courseID": 20002,
+      "date": "M/W/F",
+      "time": "12:00 PM - 1:45 PM",
+      "instructor": "Dr. Sheldon Cooper",
+      "format": 0
+    },
+    {
+      "courseID":20003,
+      "date": "T/R",
+      "time": "12:00 PM - 3 PM",
+      "instructor": "Dr. Doug Wallace",
+      "format": 1
+    },
+    {
+      "courseID": 20003,
+      "date": "M/R",
+      "time": "12:00 PM - 3 PM",
+      "instructor": "Dr. Doug Wallace",
+      "format": 0
+    },
+    {
+      "courseID": 30001,
+      "date": "M/W/F",
+      "time": "8:00 AM - 9:45 AM",
+      "instructor": "Dr. Albert Einstein",
+      "format": 1
+    },
+    {
+      "courseID": 30001,
+      "date": "M/W/F",
+      "time": "8:00 AM - 9:45 AM",
+      "instructor": "Dr. James Harden",
+      "format": 0
+    },
+    {
+      "courseID": 30002,
+      "date": "M/W/F",
+      "time": "10:00 AM - 11:45 AM",
+      "instructor": "Dr. Albert Einstein",
+      "format": 1
+    },
+    {
+      "courseID": 30002,
+      "date": "M/W/F",
+      "time": "10:00 AM - 11:45 AM",
+      "instructor": "Dr. James Harden",
+      "format": 0
+    },
+    {
+      "courseID": 30003,
+      "date": "T/R",
+      "time": "8:00 AM - 9:45 AM",
+      "instructor": "Dr. Albert Einstein",
+      "format": 1
+    },
+    {
+      "courseID": 30003,
+      "date": "T/R",
+      "time": "8:00 AM - 9:45 AM",
+      "instructor": "Dr. John Murphy",
+      "format": 0
+    },
+    {
+      "courseID": 30001,
+      "date": "M/W/F",
+      "time": "8:00 AM - 9:45 AM",
+      "instructor": "Dr. Albert Einstein",
       "format": 1
     }
   ]
