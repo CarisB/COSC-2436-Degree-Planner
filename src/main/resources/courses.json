@@ -50,32 +50,253 @@
       "prereqs": [ 30002 ]
     },
     {
-      "id": 30004,
-      "name": "College Algebra",
-      "description": "Course in algebra.",
+      "id": 10010,
+      "name": "English I",
+      "description": "The first course in English.",
       "credits": 4,
       "prereqs": []
     },
+    {
+      "id": 10011,
+      "name": "English II",
+      "description": "The Second course in English.",
+      "credits": 4,
+      "prereqs": [ 10010 ]
+    },
+    {
+      "id": 10012,
+      "name": "English III",
+      "description": "The third course in English.",
+      "credits": 4,
+      "prereqs": [ 10012 ]
+    },
+    {
+      "id": 40010,
+      "name": "Chemistry I",
+      "description": "The first course in Chemistry.",
+      "credits": 3,
+      "prereqs": [ 40011 ]
+    },
+    {
+      "id": 40011,
+      "name": "Chemistry I Lab",
+      "description": "The lab for Chemistry I.",
+      "credits": 1,
+      "prereqs": [ 40010 ]
+    },
+    {
+      "id": 40020,
+      "name": "Chemistry II",
+      "description": "The second course in Chemistry.",
+      "credits": 3,
+      "prereqs": [ 40021 ]
+    },
+    {
+      "id": 40021,
+      "name": "Chemistry II Lab",
+      "description": "The lab for Chemistry II.",
+      "credits": 1,
+      "prereqs": [ 40020 ]
+    },
+    {
+      "id": 40030,
+      "name": "Biology",
+      "description": "The first course in Biology.",
+      "credits": 3,
+      "prereqs": [ 40031 ]
+    },
+    {
+      "id": 40040,
+      "name": "Biology II",
+      "description": "The second course in Biology.",
+      "credits": 3,
+      "prereqs": [ 40041 ]
+    },
+    {
+      "id": 40031,
+      "name": "Biology I Lab",
+      "description": "The lab for Biology I.",
+      "credits": 1,
+      "prereqs": [ 40030 ]
+    },
+    {
+      "id": 40041,
+      "name": "Biology II Lab",
+      "description": "The lab for Biology II.",
+      "credits": 1,
+      "prereqs": [ 40040 ]
+    },
+    {
+      "id": 40050,
+      "name": "Physics",
+      "description": "The first course in Physics.",
+      "credits": 3,
+      "prereqs": [ 40051 ]
+    },
+    {
+      "id": 40060,
+      "name": "Physics II",
+      "description": "The second course in Physics.",
+      "credits": 3,
+      "prereqs": [ 40061 ]
+    },
+    {
+      "id": 40051,
+      "name": "Physics I Lab",
+      "description": "The lab for Physics I.",
+      "credits": 1,
+      "prereqs": [ 40050 ]
+    },
+    {
+      "id": 40061,
+      "name": "Physics II Lab",
+      "description": "The lab for Physics II.",
+      "credits": 1,
+      "prereqs": [ 40060 ]
+    },
+    {
+      "id": 40070,
+      "name": "Psychology",
+      "description": "The first course in Psychology.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 40071,
+      "name": "Psychology II",
+      "description": "The second course in Psychology.",
+      "credits": 4,
+      "prereqs": [ 40070 ]
+    },
+    {
+      "id": 10010,
+      "name": "Economics",
+      "description": "The first course in economics.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 10011,
+      "name": "Economics II",
+      "description": "The second course in Economics.",
+      "credits": 4,
+      "prereqs": [ 10010 ]
+    },
+    {
+      "id": 10020,
+      "name": "Accounting",
+      "description": "The first course in Accounting.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 70001,
+      "name": "Criminology",
+      "description": "Course in criminal behavior.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 70002,
+      "name": "Courts and Social Policy",
+      "description": "Course in the court system.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 70003,
+      "name": "Theories of Criminal Behavior",
+      "description": "Course in theories about criminal behavior.",
+      "credits": 4,
+      "prereqs": [ 40070 ]
+    },
+    {
+      "id": 50001,
+      "name": "Music Appreciation",
+      "description": "Course in theories about criminal behavior.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 50020,
+      "name": "Piano I",
+      "description": "First Course in Piano",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 50021,
+      "name": "Piano II",
+      "description": "Second course in Piano.",
+      "credits": 4,
+      "prereqs": [ 50020 ]
+    },
+    {
+      "id": 50030,
+      "name": "Guitar I",
+      "description": "First course in guitar.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 50031,
+      "name": "Guitar II",
+      "description": "Second course in guitar",
+      "credits": 4,
+      "prereqs": [ 50030 ]
+    },
+    {
+      "id": 50040,
+      "name": "Music History",
+      "description": "Course in Music History",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 40100,
+      "name": "Art Appreciation",
+      "description": "Course in Art appreciation.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 40101,
+      "name": "Art History",
+      "description": "Course in Art History.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 40201,
+      "name": "Drawing I",
+      "description": "First course in drawing.",
+      "credits": 4,
+      "prereqs": []
+    },
+    {
+      "id": 40202,
+      "name": "Drawing II",
+      "description": "Second Course in drawing.",
+      "credits": 4,
+      "prereqs": [ 40201 ]
+    },
+    {
+      "id": 30004,
+      "name": "College Algebra",
+      "description": "Course in algebra"
+      "prereqs": []
+    }
     {
       "id": 30005,
       "name": "Algebra II",
-      "description": "Second Course in Algebra",
-      "credits": 4,
-      "prereqs": [ 30004 ]
-    },
+      "description": "Second Course in algebra"
+      "prereqs": [ 30005 ]
+    }
     {
       "id": 30006,
-      "name": "Geometry I",
-      "description": "First course in Geometry.",
-      "credits": 4,
+      "name": "Geometry",
+      "description": "Course in geometry"
       "prereqs": []
-    },
-    {
-      "id": 30007,
-      "name": "Geometry II",
-      "description": "Second course in Geometry.",
-      "credits": 4,
-      "prereqs": [ 30008 ]
     }
   ]
 }
