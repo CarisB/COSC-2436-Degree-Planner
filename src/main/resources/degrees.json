@@ -6,9 +6,9 @@
       "coreCredits": 36,
       "majorReqCredits": 18,
       "electiveCredits": 6,
-      "core": [],
-      "majorReq": [],
-      "elective": []
+      "core": [ 10010, 10011, 30004, 40070 ],
+      "majorReq": [ 40030, 40040, 40010, 40020, 40050 ],
+      "elective": [ 40060 ]
     },
     {
       "id": 20001,
@@ -16,59 +16,59 @@
       "coreCredits": 36,
       "majorReqCredits": 18,
       "electiveCredits": 6,
-      "core": [ 20001, 20002, 20003, 30001, 30002 ],
-      "majorReq": [],
+      "core": [ 10010, 40040, 40040, 40010 ],
+      "majorReq": [ 20001, 20002, 20003, 30001, 30002 ],
       "elective": [ 30003 ]
     },
     {
       "id": 30001,
       "name": "Mathematics, A.S.",
-      "coreCredits": 36,
-      "majorReqCredits": 18,
-      "electiveCredits": 6,
-      "core": [ 30001, 30002, 30003, 30004, 30005 ],
-      "majorReq": [],
-      "elective": [ 30006 ]
+      "coreCredits": 30,
+      "majorReqCredits": 15,
+      "electiveCredits": 4,
+      "core": [ 10010, 10011, 30004, 30005, 30006 ],
+      "majorReq": [ 30001, 30002, 30003 ],
+      "elective": [ 40050 ]
     },
     {
       "id": 40001,
       "name": "Fine Arts, A.A.",
-      "coreCredits": 36,
+      "coreCredits": 32,
       "majorReqCredits": 18,
       "electiveCredits": 6,
-      "core": [],
-      "majorReq": [],
-      "elective": []
+      "core": [ 10010, 10011, 40030, 40050, 30004 ],
+      "majorReq": [ 40100, 40101, 40201, 40202 ],
+      "elective": [ 50040 ]
     },
     {
       "id": 50001,
       "name": "Music, A.A.",
-      "coreCredits": 36,
-      "majorReqCredits": 18,
-      "electiveCredits": 6,
-      "core": [],
-      "majorReq": [],
-      "elective": []
+      "coreCredits": 26,
+      "majorReqCredits": 16,
+      "electiveCredits": 8,
+      "core": [ 30004, 10010, 10011, 10012 ],
+      "majorReq": [ 50001, 50020, 50021, 50040 ],
+      "elective": [ 50030, 50031 ]
     },
     {
       "id": 60001,
       "name": "Business, A.A.",
-      "coreCredits": 36,
-      "majorReqCredits": 18,
+      "coreCredits": 24,
+      "majorReqCredits": 12,
       "electiveCredits": 6,
-      "core": [],
-      "majorReq": [],
-      "elective": []
+      "core": [ 10010, 10011, 30004, 40030, 40040 ],
+      "majorReq": [ 10010, 10011, 10020 ],
+      "elective": [ 50040 ]
     },
     {
       "id": 70001,
       "name": "Criminal Justice, A.A.S.",
       "coreCredits": 36,
-      "majorReqCredits": 18,
+      "majorReqCredits": 20,
       "electiveCredits": 6,
-      "core": [],
-      "majorReq": [],
-      "elective": []
+      "core": [ 10010, 10011, 40030, 40040, 40010 ],
+      "majorReq": [ 40070, 40071, 70001, 70002, 70003 ],
+      "elective": [ 40020 ]
     }
   ]
 }
