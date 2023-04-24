@@ -20,7 +20,11 @@
       "id": 10475,
       "name": "Paul Russell",
       "degreeId": 30001,
-      "transcript": []
+      "transcript": [
+        { "id": 30001, "grade": 100 },
+        { "id": 30002, "grade": 100 },
+        { "id": 30003, "grade": 100 }
+      ]
     },
     {
       "id": 11306,
@@ -61,8 +65,12 @@
     {
       "id": 15504,
       "name": "Sara Rodriguez",
-      "degreeId": 10001,
-      "transcript": []
+      "degreeId": 30001,
+      "transcript": [
+        { "id": 30001, "grade": 100 },
+        { "id": 30002, "grade": 100 },
+        { "id": 30003, "grade": 100 }
+      ]
     },
     {
       "id": 10002,
