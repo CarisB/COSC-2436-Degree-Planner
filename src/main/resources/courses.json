@@ -283,19 +283,22 @@
     {
       "id": 30004,
       "name": "College Algebra",
-      "description": "Course in algebra"
+      "description": "Course in algebra",
+      "credits": 4,
       "prereqs": []
-    }
+    },
     {
       "id": 30005,
       "name": "Algebra II",
-      "description": "Second Course in algebra"
+      "description": "Second Course in algebra",
+      "credits": 4,
       "prereqs": [ 30005 ]
-    }
+    },
     {
       "id": 30006,
       "name": "Geometry",
-      "description": "Course in geometry"
+      "description": "Course in geometry",
+      "credits": 3,
       "prereqs": []
     }
   ]
