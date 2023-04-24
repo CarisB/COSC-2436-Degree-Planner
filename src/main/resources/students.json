@@ -4,7 +4,10 @@
       "id": 14581,
       "name": "Richard Torres",
       "degreeId": 40001,
-      "transcript": []
+      "transcript": [
+        { "id": 10010, "grade": 85 },
+        { "id": 50040, "grade": 74 }
+      ]
     },
     {
       "id": 17412,
@@ -21,55 +24,75 @@
       "name": "Paul Russell",
       "degreeId": 30001,
       "transcript": [
-        { "id": 30001, "grade": 100 },
-        { "id": 30002, "grade": 100 },
-        { "id": 30003, "grade": 100 }
+        { "id": 30001, "grade": 85 },
+        { "id": 30002, "grade": 70 },
+        { "id": 30003, "grade": 75 }
       ]
     },
     {
       "id": 11306,
       "name": "Amanda Walker",
       "degreeId": 10001,
-      "transcript": []
+      "transcript": [
+        { "id": 40030, "grade": 90 },
+        { "id": 40010, "grade": 88 }
+      ]
     },
     {
       "id": 13023,
       "name": "Linda Jones",
       "degreeId": 50001,
-      "transcript": []
+      "transcript": [
+        { "id": 50001, "grade": 86 },
+        { "id": 50020, "grade": 95 }
+      ]
     },
     {
       "id": 10403,
       "name": "Susan Nelson",
       "degreeId": 70001,
-      "transcript": []
+      "transcript": [
+        { "id": 70001, "grade": 80 },
+        { "id": 70002, "grade": 88 },
+        { "id": 70003, "grade": 75 }
+      ]
     },
     {
       "id": 10909,
       "name": "Gloria Wright",
       "degreeId": 60001,
-      "transcript": []
+      "transcript": [
+        { "id": 10010, "grade": 80 },
+        { "id": 10011, "grade": 78 }
+      ]
     },
     {
       "id": 18025,
       "name": "Michael Sanchez",
       "degreeId": 40001,
-      "transcript": []
+      "transcript": [
+        { "id": 40100, "grade": 100 },
+        { "id": 40101, "grade": 90 },
+        { "id": 40201, "grade": 95 }
+      ]
     },
     {
       "id": 19013,
       "name": "Gregory Ramirez",
       "degreeId": 70001,
-      "transcript": []
+      "transcript": [
+        { "id": 40070, "grade": 80 },
+        { "id": 70001, "grade": 88 }
+      ]
     },
     {
       "id": 15504,
       "name": "Sara Rodriguez",
       "degreeId": 30001,
       "transcript": [
-        { "id": 30001, "grade": 100 },
-        { "id": 30002, "grade": 100 },
-        { "id": 30003, "grade": 100 }
+        { "id": 30004, "grade": 78 },
+        { "id": 30006, "grade": 80 },
+        { "id": 20001, "grade": 95 }
       ]
     },
     {
