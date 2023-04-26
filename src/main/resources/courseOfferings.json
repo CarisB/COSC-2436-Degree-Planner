@@ -85,11 +85,103 @@
       "format": 0
     },
     {
-      "courseID": 30001,
+      "courseID": 10010,
       "date": "M/W/F",
       "time": "8:00 AM - 9:45 AM",
-      "instructor": "Dr. Albert Einstein",
+      "instructor": "Dr. Sheldon Cooper",
       "format": 1
+    },
+    {
+      "courseID": 10010,
+      "date": "M/W/F",
+      "time": "8:00 AM - 9:45 AM",
+      "instructor": "Dr. Peter Parker",
+      "format": 0
+    },
+    {
+      "courseID": 10011,
+      "date": "M/W/F",
+      "time": "10:00 AM - 11:45 AM",
+      "instructor": "Dr. Sheldon Cooper",
+      "format": 1
+    },
+    {
+      "courseID": 10011,
+      "date": "M/W/F",
+      "time": "10:00 AM - 11:45 AM",
+      "instructor": "Dr. Peter Parker",
+      "format": 0
+    },
+    {
+      "courseID": 10012,
+      "date": "M/W/F",
+      "time": "12:00 PM - 1:45 PM",
+      "instructor": "Dr. Sheldon Cooper",
+      "format": 1
+    },
+    {
+      "courseID": 10012,
+      "date": "M/W/F",
+      "time": "12:00 PM - 1:45 PM",
+      "instructor": "Dr. Peter Parker",
+      "format": 0
+    },
+    {
+      "courseID": 40010,
+      "date": "M/W/F",
+      "time": "6:00 AM - 7:45 AM",
+      "instructor": "Dr. Sheldon Cooper",
+      "format": 1
+    },
+    {
+      "courseID": 40010,
+      "date": "M/W/F",
+      "time": "6:00 AM - 7:45 AM",
+      "instructor": "Dr. Octavius",
+      "format": 0
+    },
+    {
+      "courseID": 40011,
+      "date": "M/W/F",
+      "time": "7:45 AM - 8:45 AM",
+      "instructor": "Dr. Sheldon Cooper",
+      "format": 1
+    },
+    {
+      "courseID": 40011,
+      "date": "M/W/F",
+      "time": "7:45 AM - 8:45 AM",
+      "instructor": "Dr. Octavius",
+      "format": 0
+    },
+    {
+      "courseID": 40020,
+      "date": "T/R",
+      "time": "6:00 AM - 7:45 AM",
+      "instructor": "Dr. Octavius",
+      "format": 1
+    },
+    {
+      "courseID": 40020,
+      "date": "T/R",
+      "time": "6:00 AM - 7:45 AM",
+      "instructor": "Dr. Michael Jordan",
+      "format": 0
+    },
+    {
+      "courseID": 40021,
+      "date": "T/R",
+      "time": "7:45 AM - 8:45 AM",
+      "instructor": "Dr. Octavius",
+      "format": 1
+    },
+    {
+      "courseID": 40021,
+      "date": "T/R",
+      "time": "7:45 AM - 8:45 AM",
+      "instructor": "Dr. Michael Jordan",
+      "format": 0
     }
+  ]
   ]
 }
