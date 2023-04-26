@@ -181,7 +181,370 @@
       "time": "7:45 AM - 8:45 AM",
       "instructor": "Dr. Michael Jordan",
       "format": 0
+    },
+    {
+      "courseID": 40030,
+      "date": "M/W/F",
+      "time": "1:45 PM - 2:45 PM",
+      "instructor": "Dr. Lebron James",
+      "format": 1
+    },
+    {
+      "courseID": 40030,
+      "date": "M/W/F",
+      "time": "1:45 PM - 2:45 PM",
+      "instructor": "Dr. Rick James",
+      "format": 0
+    },
+    {
+      "courseID": 40031,
+      "date": "M/W/F",
+      "time": "2:45 PM - 3:45 PM",
+      "instructor": "Dr. Lebron James",
+      "format": 1
+    },
+    {
+      "courseID": 40031,
+      "date": "M/W/F",
+      "time": "2:45 PM - 3:45 PM",
+      "instructor": "Dr. Lebron James",
+      "format": 0
+    },
+    {
+      "courseID": 40030,
+      "date": "M/W/F",
+      "time": "1:45 PM - 2:45 PM",
+      "instructor": "Dr. Lebron James",
+      "format": 1
+    },
+    {
+      "courseID": 40040,
+      "date": "T/R",
+      "time": "1:45 PM - 2:45 PM",
+      "instructor": "Dr. Lebron James",
+      "format": 1
+    },
+    {
+      "courseID": 40040,
+      "date": "T/R",
+      "time": "2:45 PM - 3:45 PM",
+      "instructor": "Dr. Lebron James",
+      "format": 1
+    },
+    {
+      "courseID": 40041,
+      "date": "M/W/F",
+      "time": "1:45 PM - 2:45 PM",
+      "instructor": "Dr. Lebron James",
+      "format": 1
+    },
+    {
+      "courseID": 40050,
+      "date": "M/W/F",
+      "time": "4:45 PM - 5:45 PM",
+      "instructor": "Dr. Leonardo DiCaprio",
+      "format": 1
+    },
+    {
+      "courseID": 40051,
+      "date": "M/W/F",
+      "time": "5:45 PM - 6:45 PM",
+      "instructor": "Dr. Leonardo DiCaprio",
+      "format": 1
+    },
+    {
+      "courseID": 40060,
+      "date": "T/R",
+      "time": "4:45 PM - 5:45 PM",
+      "instructor": "Dr. Leonardo DiCaprio",
+      "format": 1
+    },
+    {
+      "courseID": 40061,
+      "date": "T/R",
+      "time": "5:45 PM - 6:45 PM",
+      "instructor": "Dr. Leonardo DiCaprio",
+      "format": 1
+    },
+    {
+      "courseID": 40070,
+      "date": "M/W/F",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Tony Hawk",
+      "format": 1
+    },
+    {
+      "courseID": 40070,
+      "date": "M/W/F",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Mario Bros",
+      "format": 0
+    },
+    {
+      "courseID": 40071,
+      "date": "T/R",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Tony Hawk",
+      "format": 1
+    },
+    {
+      "courseID": 40070,
+      "date": "T/R",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Mario Bros",
+      "format": 0
+    },
+    {
+      "courseID": 10010,
+      "date": "M/W/F",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Bill Gates",
+      "format": 1
+    },
+    {
+      "courseID": 10010,
+      "date": "M/W/F",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Jeff Besos",
+      "format": 0
+    },
+    {
+      "courseID": 10011,
+      "date": "T/R",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Bill Gates",
+      "format": 1
+    },
+    {
+      "courseID": 10011,
+      "date": "T/R",
+      "time": "1:45 PM - 3:00 PM",
+      "instructor": "Dr. Jeff Besos",
+      "format": 0
+    },
+    {
+      "courseID": 10020,
+      "date": "M/W/F",
+      "time": "10:45 AM - 12:00 PM",
+      "instructor": "Dr. Richie Rich",
+      "format": 1
+    },
+    {
+      "courseID": 10020,
+      "date": "M/W/F",
+      "time": "10:45 AM - 12:00 PM",
+      "instructor": "Dr. Winnie Poo",
+      "format": 0
+    },
+    {
+      "courseID": 70001,
+      "date": "M/W/F",
+      "time": "9:45 AM - 11:00 AM",
+      "instructor": "Dr. Steve Harvey",
+      "format": 1
+    },
+    {
+      "courseID": 70001,
+      "date": "M/W/F",
+      "time": "9:45 AM - 11:00 AM",
+      "instructor": "Dr. Peter Piper",
+      "format": 0
+    },
+    {
+      "courseID": 70002,
+      "date": "T/R",
+      "time": "9:45 AM - 11:00 AM",
+      "instructor": "Dr. Peter Piper",
+      "format": 0
+    },
+    {
+      "courseID": 70002,
+      "date": "T/R",
+      "time": "9:45 AM - 11:00 AM",
+      "instructor": "Dr. Steve Harvey",
+      "format": 1
+    },
+    {
+      "courseID": 70003,
+      "date": "M/W/F",
+      "time": "6:45 AM - 8:00 AM",
+      "instructor": "Dr. Peter Piper",
+      "format": 1
+    },
+    {
+      "courseID": 70003,
+      "date": "M/W/F",
+      "time": "6:45 AM - 8:00 AM",
+      "instructor": "Dr. Steve Harvey",
+      "format": 0
+    },
+    {
+      "courseID": 50001,
+      "date": "M/W/F",
+      "time": "6:45 AM - 8:00 AM",
+      "instructor": "Dr. Katy Perry",
+      "format": 1
+    },
+    {
+      "courseID": 50001,
+      "date": "M/W/F",
+      "time": "6:45 AM - 8:00 AM",
+      "instructor": "Dr. Post Malone",
+      "format": 0
+    },
+    {
+      "courseID": 50020,
+      "date": "T/R",
+      "time": "6:45 AM - 8:00 AM",
+      "instructor": "Dr. Katy Perry",
+      "format": 0
+    },
+    {
+      "courseID": 50020,
+      "date": "T/R",
+      "time": "6:45 AM - 8:00 AM",
+      "instructor": "Dr. Post Malone",
+      "format": 0
+    },
+    {
+      "courseID": 50021,
+      "date": "M/W/F",
+      "time": "8:15 AM - 10:00 AM",
+      "instructor": "Dr. Katy Perry",
+      "format": 1
+    },
+    {
+      "courseID": 50021,
+      "date": "M/W/F",
+      "time": "8:15 AM - 10:00 AM",
+      "instructor": "Dr. Post Malone",
+      "format": 0
+    },
+    {
+      "courseID": 50030,
+      "date": "T/R",
+      "time": "8:15 AM - 10:00 AM",
+      "instructor": "Dr. Jerry Rice",
+      "format": 1
+    },
+    {
+      "courseID": 50031,
+      "date": "T/R",
+      "time": "8:15 AM - 10:00 AM",
+      "instructor": "Dr. Luke Skywalker",
+      "format": 1
+    },
+    {
+      "courseID": 50040,
+      "date": "M/W/F",
+      "time": "2:15 PM - 4:00 PM",
+      "instructor": "Dr. Mace Windu",
+      "format": 1
+    },
+    {
+      "courseID": 50040,
+      "date": "M/W/F",
+      "time": "2:15 PM - 4:00 PM",
+      "instructor": "Dr. Luke Skywalker",
+      "format": 0
+    },
+    {
+      "courseID": 40100,
+      "date": "M/W/F",
+      "time": "2:15 PM - 4:00 PM",
+      "instructor": "Dr. Obi Kenobi",
+      "format": 1
+    },
+    {
+      "courseID": 40100,
+      "date": "M/W/F",
+      "time": "2:15 PM - 4:00 PM",
+      "instructor": "Dr. Ashoka Tano",
+      "format": 0
+    },
+    {
+      "courseID": 40101,
+      "date": "T/R",
+      "time": "2:15 PM - 4:00 PM",
+      "instructor": "Dr. Bob Marley",
+      "format": 1
+    },
+    {
+      "courseID": 40101,
+      "date": "T/R",
+      "time": "2:15 PM - 4:00 PM",
+      "instructor": "Dr. Frida Kahlo",
+      "format": 0
+    },
+    {
+      "courseID": 40201,
+      "date": "T/R",
+      "time": "5:15 PM - 7:00 PM",
+      "instructor": "Dr. Bob Marley",
+      "format": 1
+    },
+    {
+      "courseID": 40201,
+      "date": "T/R",
+      "time": "5:15 PM - 7:00 PM",
+      "instructor": "Dr. Frida Kahlo",
+      "format": 0
+    },
+    {
+      "courseID": 40202,
+      "date": "M/W/F",
+      "time": "5:15 PM - 7:00 PM",
+      "instructor": "Dr. Bob Marley",
+      "format": 1
+    },
+    {
+      "courseID": 40202,
+      "date": "M/W/F",
+      "time": "5:15 PM - 7:00 PM",
+      "instructor": "Dr. Frida Kahlo",
+      "format": 0
+    },
+    {
+      "courseID": 30004,
+      "date": "M/W/F",
+      "time": "1:15 PM - 3:00 PM",
+      "instructor": "Dr. George Washington",
+      "format": 1
+    },
+    {
+      "courseID": 30004,
+      "date": "M/W/F",
+      "time": "1:15 PM - 3:00 PM",
+      "instructor": "Dr. Bo Katan",
+      "format": 0
+    },
+    {
+      "courseID": 30005,
+      "date": "M/W/F",
+      "time": "3:15 PM - 5:00 PM",
+      "instructor": "Dr. George Washington",
+      "format": 1
+    },
+    {
+      "courseID": 30005,
+      "date": "M/W/F",
+      "time": "3:15 PM - 5:00 PM",
+      "instructor": "Dr. Bo Katan",
+      "format": 0
+    },
+    {
+      "courseID": 30006,
+      "date": "M/W/F",
+      "time": "5:15 PM - 8:00 PM",
+      "instructor": "Dr. George Washington",
+      "format": 1
+    },
+    {
+      "courseID": 30006,
+      "date": "M/W/F",
+      "time": "5:15 PM - 8:00 PM",
+      "instructor": "Dr. Bo Katan",
+      "format": 0
     }
-  ]
   ]
 }
