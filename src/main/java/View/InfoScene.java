@@ -21,15 +21,16 @@ public class InfoScene implements IScene {
     }
 
     public void Init() throws Exception {
+        DisplayInfo();
+        DisplayTranscript();
+        WaitForInput();
+    }
+
+    void DisplayInfo() {
         DrawBar(PANEL_LENGTH, '*');
         System.out.println(INDENT_STRING + student.getName());
         System.out.println(INDENT_STRING + student.getDegree().getName());
         DrawBar(PANEL_LENGTH, '*');
-        DisplayTranscript();
-        System.out.println(RETURN_MSG);
-
-        System.in.read();
-        SceneManager.Next(new DashboardScene(student));
     }
 
     void DisplayTranscript() {
@@ -48,6 +49,12 @@ public class InfoScene implements IScene {
             System.out.println();
         });
         DrawBar(PANEL_LENGTH, '=');
+    }
+
+    void WaitForInput() throws Exception {
+        System.out.print(RETURN_MSG);
+        System.in.read();
+        SceneManager.Next(new DashboardScene(student));
     }
 
     void DrawBar(int _size, char _char) {
