@@ -34,8 +34,8 @@ public class DegreeScene implements IScene {
         System.out.print(INDENT_STRING);
         System.out.println(degree.getName());
         DrawBar(PANEL_LENGTH, '=');
-        DisplayCoursesSection(degree.getCore(), degree.getCoreCredits(), "Core");
         DisplayCoursesSection(degree.getMajorReq(), degree.getMajorReqCredits(), "Major-related");
+        DisplayCoursesSection(degree.getCore(), degree.getCoreCredits(), "Core");
         DisplayCoursesSection(degree.getElective(), degree.getElectiveCredits(), "Elective");
         System.out.println();
     }
@@ -73,12 +73,8 @@ public class DegreeScene implements IScene {
     void InvalidCourseError(int _id) {
         System.out.println(INVALID_COURSE_ERROR + _id);
     }
-
     void DrawBar(int _size, char _char) {
         System.out.println(String.valueOf(_char).repeat(_size));
     }
-
-    void DrawInlineBar(int _size, char _char) {
-        System.out.print(String.valueOf(_char).repeat(_size));
-    }
+    void DrawInlineBar(int _size, char _char) { System.out.print(String.valueOf(_char).repeat(_size)); }
 }

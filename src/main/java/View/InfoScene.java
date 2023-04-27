@@ -60,8 +60,5 @@ public class InfoScene implements IScene {
     void DrawBar(int _size, char _char) {
         System.out.println(String.valueOf(_char).repeat(_size));
     }
-
-    void DrawInlineBar(int _size, char _char) {
-        System.out.print(String.valueOf(_char).repeat(_size));
-    }
+    void DrawInlineBar(int _size, char _char) { System.out.print(String.valueOf(_char).repeat(_size)); }
 }
