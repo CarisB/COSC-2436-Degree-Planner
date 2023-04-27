@@ -21,11 +21,10 @@ public class DegreeScene implements IScene {
             throw new Exception(NULL_STUDENT_ERROR);
 
         student = _student;
+        degree = student.getDegree();
     }
 
     public void Init() throws Exception {
-        degree = student.getDegree();
-
         DisplayInfo();
         WaitForInput();
     }
