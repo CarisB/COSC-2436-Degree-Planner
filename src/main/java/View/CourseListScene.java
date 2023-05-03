@@ -87,9 +87,9 @@ public class CourseListScene implements IScene {
             // Load next Scene
             if (option == 0)  // Return to Dashboard
                 SceneManager.Next(new DashboardScene(student));
-            else if (option < courseList.size() + 1) {  // Valid course selected
-
-            } else  // Invalid input -> Retry()
+            else if (option < courseList.size() + 1)  // Valid course selected
+                SceneManager.Next(new CourseDetailScene(student, courseList.get(option)));
+            else  // Invalid input -> Retry()
                 Retry();
 
         } catch (InputMismatchException e) {
