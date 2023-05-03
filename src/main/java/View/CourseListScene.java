@@ -1,5 +1,7 @@
 package View;
 
+import java.util.ArrayList;
+import java.util.List;
 import Global.SceneManager;
 import Model.Student;
 import Model.Degree;
@@ -38,19 +40,28 @@ public class CourseListScene implements IScene {
     void DisplayCourseList() {
         DrawBar(PANEL_LENGTH, '-');
 
-        for (Course course : degree.getMajorReq()) { DisplayEntry(course); }
-        for (Course course : degree.getCore()) { DisplayEntry(course); }
-        for (Course course : degree.getElective()) { DisplayEntry(course); }
+        // Create an array of course arrays to convert to a List<Course> with ConcatArrayAsList()
+        Course[][] arrays = {
+                degree.getMajorReq(),
+                degree.getCore(),
+                degree.getElective()
+        };
+
+        List<Course> courseList = ConcatArraysAsList(arrays);
+
+        for (int i = 0; i < courseList.size(); i++)
+            DisplayEntry(i, courseList.get(i));  // Displays the course, along with an index number (for menu)
 
         DrawBar(PANEL_LENGTH, '-');
     }
 
-    void DisplayEntry(Course _course) {
+    void DisplayEntry(int _i, Course _course) {
         char border = '|';
 
-        System.out.print(border + INDENT_STRING);
+        System.out.print(border + " " + _i + " " + border);
+        System.out.print(INDENT_STRING);
         System.out.print(_course.getName());
-        System.out.print(INDENT_STRING + INDENT_STRING);
+        System.out.print(INDENT_STRING);
         System.out.print(_course.getCredits());
         System.out.print(" credits");
         System.out.println();
@@ -59,6 +70,18 @@ public class CourseListScene implements IScene {
     void WaitForInput() throws Exception {
         System.in.read();
         SceneManager.Next(new DashboardScene(student));
+    }
+
+    <T> List<T> ConcatArraysAsList(T[][] _arrays) {
+
+        List<T> result = new ArrayList<>();
+
+        for (T[] array : _arrays)
+            for (T entry : array)
+                if (!student.getTranscript().containsKey(entry))  // Only add if the student hasn't already completed the course
+                    result.add(entry);
+
+        return result;
     }
 
     void DrawBar(int _size, char _char) {
