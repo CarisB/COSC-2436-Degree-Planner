@@ -88,7 +88,7 @@ public class CourseListScene implements IScene {
             if (option == 0)  // Return to Dashboard
                 SceneManager.Next(new DashboardScene(student));
             else if (option < courseList.size() + 1)  // Valid course selected
-                SceneManager.Next(new CourseDetailScene(student, courseList.get(option)));
+                SceneManager.Next(new CourseDetailScene(student, courseList.get(option - 1)));
             else  // Invalid input -> Retry()
                 Retry();
 
