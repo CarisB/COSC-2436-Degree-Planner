@@ -1,7 +1,10 @@
 package View;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
+
 import Global.SceneManager;
 import Model.Student;
 import Model.Degree;
@@ -10,11 +13,15 @@ import Model.Course;
 public class CourseListScene implements IScene {
     final String HEADER_MSG = "List of recommended courses";
     final String NULL_STUDENT_ERROR = "Cannot have a null Student!";
+    final String COURSE_LIST_EMPTY = "There are no courses to recommend at this time.";
+    final String MENU_TEXT = "Select a number to view a course, or enter [0] to return to the dashboard: ";
+    final String INVALID_OPTION_ERROR = "Please enter a valid option: ";
     final int PANEL_LENGTH = 100;
     final String INDENT_STRING = "    ";
 
     Student student;
     Degree degree;
+    List<Course> courseList;
 
     public CourseListScene(Student _student) throws Exception {
         if (_student == null)
@@ -22,6 +29,7 @@ public class CourseListScene implements IScene {
 
         student = _student;
         degree = student.getDegree();
+        courseList = new ArrayList<>();
     }
 
     public void Init() throws Exception {
@@ -47,12 +55,16 @@ public class CourseListScene implements IScene {
                 degree.getElective()
         };
 
-        List<Course> courseList = ConcatArraysAsList(arrays);
+        courseList = ConcatArraysAsList(arrays);
 
-        for (int i = 0; i < courseList.size(); i++)
-            DisplayEntry(i, courseList.get(i));  // Displays the course, along with an index number (for menu)
+        if (!courseList.isEmpty())
+            for (int i = 0; i < courseList.size(); i++)
+                DisplayEntry(i + 1, courseList.get(i));  // Displays the course, along with an index number (for menu)
+        else
+            System.out.println(INDENT_STRING + COURSE_LIST_EMPTY);
 
         DrawBar(PANEL_LENGTH, '-');
+        System.out.print(MENU_TEXT);
     }
 
     void DisplayEntry(int _i, Course _course) {
@@ -68,8 +80,26 @@ public class CourseListScene implements IScene {
     }
 
     void WaitForInput() throws Exception {
-        System.in.read();
-        SceneManager.Next(new DashboardScene(student));
+        try {
+            Scanner scn = new Scanner(System.in);
+            int option = scn.nextInt();
+
+            // Load next Scene
+            if (option == 0)  // Return to Dashboard
+                SceneManager.Next(new DashboardScene(student));
+            else if (option < courseList.size() + 1) {  // Valid course selected
+
+            } else  // Invalid input -> Retry()
+                Retry();
+
+        } catch (InputMismatchException e) {
+            Retry();
+        }
+    }
+
+    void Retry() throws Exception {
+        System.out.print(INVALID_OPTION_ERROR);
+        WaitForInput();
     }
 
     <T> List<T> ConcatArraysAsList(T[][] _arrays) {

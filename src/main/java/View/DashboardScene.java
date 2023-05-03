@@ -2,6 +2,8 @@ package View;
 
 import Global.SceneManager;
 import Model.Student;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class DashboardScene implements IScene {
@@ -13,8 +15,7 @@ public class DashboardScene implements IScene {
     final String COURSE_LIST_OPTION = "3) View available courses";
     final String LOGOUT_OPTION = "4) Log out";
     final String INPUT_PROMPT = "Please select an option: ";
-    final String INVALID_OPTION_ERROR = "Please enter a valid option.";
-    final String RETRY_MSG = "Press ENTER to continue.";
+    final String INVALID_OPTION_ERROR = "Please enter a valid option: ";
 
     Student student;
 
@@ -58,23 +59,25 @@ public class DashboardScene implements IScene {
     }
 
     void WaitForInput() throws Exception {
-        Scanner scn = new Scanner(System.in);
-        int option = scn.nextInt();
+        try {
+            Scanner scn = new Scanner(System.in);
+            int option = scn.nextInt();
 
-        // Load next Scene
-        switch (option) {
-            case 1 -> SceneManager.Next(new InfoScene(student));
-            case 2 -> SceneManager.Next(new DegreeScene(student));
-            case 3 -> SceneManager.Next(new CourseListScene(student));
-            case 4 -> SceneManager.Next(new LoginScene());
-            default -> Retry();
+            // Load next Scene
+            switch (option) {
+                case 1 -> SceneManager.Next(new InfoScene(student));
+                case 2 -> SceneManager.Next(new DegreeScene(student));
+                case 3 -> SceneManager.Next(new CourseListScene(student));
+                case 4 -> SceneManager.Next(new LoginScene());
+                default -> Retry();
+            }
+        } catch (InputMismatchException e) {
+            Retry();
         }
     }
 
     void Retry() throws Exception {
-        System.out.println(INVALID_OPTION_ERROR);
-        System.out.print(RETRY_MSG);
-        System.in.read();
-        SceneManager.Next(new DashboardScene(student));
+        System.out.print(INVALID_OPTION_ERROR);
+        WaitForInput();
     }
 }
