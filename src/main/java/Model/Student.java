@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.Map;
+import java.util.List;
 import java.util.ArrayList;
 
 public class Student {
@@ -8,12 +9,13 @@ public class Student {
     String name;
     Degree degree;
     Map<Course, Integer> transcript;
-    ArrayList<CourseOffering> schedule;
+    List<CourseOffering> schedule;
 
     public int getId() { return id; }
     public String getName() { return name; }
     public Degree getDegree() { return degree; }
     public Map<Course, Integer> getTranscript() { return transcript; }
+    public List<CourseOffering> getSchedule() { return schedule; }
 
     public Student(int _id,
                   String _name,

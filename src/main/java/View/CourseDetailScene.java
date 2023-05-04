@@ -5,12 +5,18 @@ import Global.SceneManager;
 import Model.CourseOffering;
 import Model.Student;
 import Model.Course;
+
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class CourseDetailScene implements IScene {
     final String NULL_STUDENT_ERROR = "Cannot have a null Student!";
     final String NULL_COURSE_ERROR = "Cannot have a null Course!";
     final String COURSE_OFFERINGS_HEADER = "Course offerings available:";
+    final String MENU_TEXT = "Select a number to add to schedule, or enter [0] to return to the course list: ";
+    final String DUPLICATE_OFFERING_ERROR = "Schedule already contains this course offering!";
+    final String INVALID_OPTION_ERROR = "Please enter a valid option: ";
     final int PANEL_LENGTH = 100;
     final String INDENT_STRING = "    ";
 
@@ -93,8 +99,41 @@ public class CourseDetailScene implements IScene {
         }
     }
 
+    void AddToSchedule(CourseOffering _offering) throws Exception {
+        List<CourseOffering> schedule = student.getSchedule();
+
+        if (!schedule.contains(_offering)) {
+            schedule.add(_offering);
+            SceneManager.Next(new InfoScene(student));
+        } else {
+            System.out.println(DUPLICATE_OFFERING_ERROR);
+            WaitForInput();
+        }
+    }
+
     void WaitForInput() throws Exception {
-        System.in.read();
+        System.out.println();
+        System.out.print(MENU_TEXT);
+
+        try {
+            Scanner scn = new Scanner(System.in);
+            int option = scn.nextInt();
+
+            if (option == 0)  // Return to Dashboard
+                SceneManager.Next(new CourseListScene(student));
+            else if (option < offerings.size() + 1)  // Valid course selected
+                AddToSchedule(offerings.get(option - 1));
+            else  // Invalid input -> Retry()
+                Retry();
+
+        } catch (InputMismatchException e) {
+            Retry();
+        }
+    }
+
+    void Retry() throws Exception {
+        System.out.print(INVALID_OPTION_ERROR);
+        WaitForInput();
     }
 
     void DrawBar(int _size, char _char) { System.out.println(String.valueOf(_char).repeat(_size)); }
