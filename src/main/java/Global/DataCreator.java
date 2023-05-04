@@ -1,6 +1,9 @@
 package Global;
 
 import Model.*;
+import Helpers.Enums.CourseFormat;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import java.io.*;
@@ -32,6 +35,13 @@ public class DataCreator {
     static final String STUDENT_TRANSCRIPT = "transcript";
     static final String STUDENT_TRANSCRIPT_COURSE_ID = "id";
     static final String STUDENT_TRANSCRIPT_COURSE_GRADE = "grade";
+
+    static final String COURSE_OFFERING_ARRAY = "courseOfferings";
+    static final String COURSE_OFFERING_COURSE_ID = "courseID";
+    static final String COURSE_OFFERING_DATE = "date";
+    static final String COURSE_OFFERING_TIME = "time";
+    static final String COURSE_OFFERING_INSTRUCTOR = "instructor";
+    static final String COURSE_OFFERING_FORMAT = "format";
 
     public static Map<Integer, Course> CreateCourseMapFromJSON(String _json) {
         Map<Integer, Course> map = new HashMap<>();
@@ -149,6 +159,31 @@ public class DataCreator {
         return map;
     }
 
+    public static Map<Integer, List<CourseOffering>> CreateCourseOfferingMapFromJSON(String _json)
+            throws Exception
+    {
+        // Map has ArrayList as value, so that course offerings can have duplicate keys
+        Map<Integer, List<CourseOffering>> map = new HashMap<>();
+
+        var jsonObj = new JSONObject(_json);  // Creates the obj to be parsed using the JSON String
+        var offerings = jsonObj.getJSONArray(COURSE_OFFERING_ARRAY);  // The parent array of objects
+
+        for (int i = 0; i < offerings.length(); i++) {
+            var offering = offerings.getJSONObject(i);
+
+            int courseID = offering.getInt(COURSE_OFFERING_COURSE_ID);
+            String date = offering.getString(COURSE_OFFERING_DATE);
+            String time = offering.getString(COURSE_OFFERING_TIME);
+            String instructor = offering.getString(COURSE_OFFERING_INSTRUCTOR);
+            CourseFormat format = CourseFormat.values()[offering.getInt(COURSE_OFFERING_FORMAT)];  // Convert int to CourseFormat
+
+            CourseOffering entry = new CourseOffering(Maps.GetCourseById(courseID), date, time, instructor, format);
+            map.computeIfAbsent(courseID, k -> new ArrayList<>()).add(entry);  // Add entry to map, but create a new ArrayList first if it doesn't exist
+        }
+
+        return map;
+    }
+
     // Takes an InputStream object and returns a JSON String to be parsed
     static String ConvertInputStreamToString(InputStream _stream)
             throws Exception
@@ -186,5 +221,12 @@ public class DataCreator {
     {
         String json = ConvertInputStreamToString(_stream);
         return CreateStudentMapFromJSON(json);
+    }
+
+    public static Map<Integer, List<CourseOffering>> CreateCourseOfferingMapFromJSON(InputStream _stream)
+            throws Exception
+    {
+        String json = ConvertInputStreamToString(_stream);
+        return CreateCourseOfferingMapFromJSON(json);
     }
 }

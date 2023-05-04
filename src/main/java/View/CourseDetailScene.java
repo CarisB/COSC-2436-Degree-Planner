@@ -2,8 +2,10 @@ package View;
 
 import Global.Maps;
 import Global.SceneManager;
+import Model.CourseOffering;
 import Model.Student;
 import Model.Course;
+import java.util.List;
 
 public class CourseDetailScene implements IScene {
     final String NULL_STUDENT_ERROR = "Cannot have a null Student!";
@@ -14,6 +16,7 @@ public class CourseDetailScene implements IScene {
 
     Student student;
     Course course;
+    List<CourseOffering> offerings;
 
     public CourseDetailScene(Student _student, Course _course) throws Exception {
         if (_student == null)
@@ -23,10 +26,12 @@ public class CourseDetailScene implements IScene {
 
         student = _student;
         course = _course;
+        offerings = Maps.GetCourseOfferingById(course.getId());  // Find the course offerings tied to this course ID
     }
 
     public void Init() throws Exception {
         DisplayCourse();
+        DisplayCourseOfferings();
         WaitForInput();
     }
 
@@ -61,9 +66,31 @@ public class CourseDetailScene implements IScene {
     }
 
     void DisplayCourseOfferings() {
-        System.out.println(COURSE_OFFERINGS_HEADER);
+        char sep = '/';
+
+        System.out.println(INDENT_STRING + COURSE_OFFERINGS_HEADER);
         DrawBar(PANEL_LENGTH, '-');
 
+        int index = 1;
+
+        for (CourseOffering offering : offerings) {
+            System.out.print("| " + index + " |");
+            System.out.print(INDENT_STRING);
+            System.out.print(offering.getDate());
+            System.out.print(INDENT_STRING + sep + INDENT_STRING);
+            System.out.print(offering.getTime());
+            System.out.print(INDENT_STRING + sep + INDENT_STRING);
+            System.out.print(offering.getInstructor());
+            System.out.print(INDENT_STRING + sep + INDENT_STRING);
+
+            switch (offering.getFormat()) {
+                case IN_PERSON -> System.out.print("In Person");
+                case ONLINE -> System.out.print("Online");
+            }
+
+            System.out.println(INDENT_STRING + sep);
+            index++;
+        }
     }
 
     void WaitForInput() throws Exception {
