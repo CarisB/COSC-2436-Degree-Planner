@@ -60,6 +60,7 @@ public class InfoScene implements IScene {
         System.out.println(INDENT_STRING + student.getName());
         System.out.println(INDENT_STRING + student.getDegree().getName());
         UI.DrawBar(PANEL_LENGTH, '/');
+        System.out.println();
     }
 
     void DisplayTranscript() {
