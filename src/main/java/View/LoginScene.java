@@ -3,14 +3,35 @@ package View;
 import Global.Maps;
 import Global.SceneManager;
 import Model.Student;
+import Helpers.UI;
+
 import java.util.Scanner;
 
 public class LoginScene implements IScene {
-    final String LOGIN_PROMPT = "Please log in using your student ID [*****]: ";
+    final String LOGIN_PROMPT = "Please log in using your student ID [*****] (e.g. 10000): ";
     final String INVALID_INPUT_ERROR = "Please enter a valid ID consisting of 5 numbers.";
-    final String RETRY_MSG = "Press ENTER to continue.";
 
-    public void Init() throws Exception {
+    String message;
+
+    public LoginScene(String _message) {
+        message = _message;
+    }
+
+    public void Init() {
+        DisplayMessage();
+        WaitForInput();
+    }
+
+    void DisplayMessage() {
+        if (message == null)
+            return;
+
+        UI.DrawBar(message.length(), '-');
+        System.out.println(message);
+        UI.DrawBar(message.length(), '-');
+    }
+
+    void WaitForInput() {
         Scanner scn = new Scanner(System.in);
 
         System.out.print(LOGIN_PROMPT);
@@ -30,10 +51,7 @@ public class LoginScene implements IScene {
         }
     }
 
-    void Retry(String _s) throws Exception {
-        System.out.println(_s);
-        System.out.print(RETRY_MSG);
-        System.in.read();
-        SceneManager.Next(new LoginScene());
+    void Retry(String _s) {
+        SceneManager.Next(new LoginScene(_s));
     }
 }

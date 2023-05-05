@@ -5,6 +5,7 @@ import Global.SceneManager;
 import Model.CourseOffering;
 import Model.Student;
 import Model.Course;
+import Helpers.UI;
 
 import java.util.InputMismatchException;
 import java.util.List;
@@ -16,7 +17,9 @@ public class CourseDetailScene implements IScene {
     final String COURSE_OFFERINGS_HEADER = "Course offerings available:";
     final String MENU_TEXT = "Select a number to add to schedule, or enter [0] to return to the course list: ";
     final String DUPLICATE_OFFERING_ERROR = "Schedule already contains this course offering!";
-    final String INVALID_OPTION_ERROR = "Please enter a valid option: ";
+    final String INVALID_OPTION_ERROR = "Please enter a valid option.";
+    final String PREREQS_NOT_MET_ERROR = "!!! Cannot add course: course prerequisites not met !!!";
+    final String COURSE_ADDED_MSG = "Course offering has been successfully added to the schedule!";
     final int PANEL_LENGTH = 100;
     final String INDENT_STRING = "    ";
 
@@ -42,11 +45,11 @@ public class CourseDetailScene implements IScene {
     }
 
     void DisplayCourse() throws Exception {
-        DrawBar(PANEL_LENGTH, '=');
+        UI.DrawBar(PANEL_LENGTH, '=');
         System.out.println();
         System.out.print(INDENT_STRING + course.getName());
         System.out.println(INDENT_STRING + "(" + course.getCredits() + " SCH)");
-        DrawBar(PANEL_LENGTH, '-');
+        UI.DrawBar(PANEL_LENGTH, '-');
         System.out.println(INDENT_STRING + course.getDescription());
         DisplayPrereqs();
     }
@@ -75,7 +78,7 @@ public class CourseDetailScene implements IScene {
         char sep = '/';
 
         System.out.println(INDENT_STRING + COURSE_OFFERINGS_HEADER);
-        DrawBar(PANEL_LENGTH, '-');
+        UI.DrawBar(PANEL_LENGTH, '-');
 
         int index = 1;
 
@@ -97,22 +100,36 @@ public class CourseDetailScene implements IScene {
             System.out.println(INDENT_STRING + sep);
             index++;
         }
+
+        System.out.println();
     }
 
     void AddToSchedule(CourseOffering _offering) throws Exception {
         List<CourseOffering> schedule = student.getSchedule();
 
         if (!schedule.contains(_offering)) {
-            schedule.add(_offering);
-            SceneManager.Next(new InfoScene(student));
-        } else {
-            System.out.println(DUPLICATE_OFFERING_ERROR);
-            WaitForInput();
-        }
+            boolean hasPrereqs = true;
+
+            int[] prereqs = _offering.getCourse().getPrereqs();
+            var transcript = student.getTranscript();
+
+            for (int prereqID : prereqs) {
+                // Prereqs not met if transcript doesn't contain it or has a failing grade
+                if (!transcript.containsKey(Maps.GetCourseById(prereqID)) ||
+                        transcript.get(Maps.GetCourseById(prereqID)) < 60)
+                    hasPrereqs = false;
+            }
+
+            if (hasPrereqs) {
+                schedule.add(_offering);
+                SceneManager.Next(new InfoScene(student, COURSE_ADDED_MSG));
+            } else
+                Retry(PREREQS_NOT_MET_ERROR);
+        } else
+            Retry(DUPLICATE_OFFERING_ERROR);
     }
 
     void WaitForInput() throws Exception {
-        System.out.println();
         System.out.print(MENU_TEXT);
 
         try {
@@ -121,21 +138,18 @@ public class CourseDetailScene implements IScene {
 
             if (option == 0)  // Return to Dashboard
                 SceneManager.Next(new CourseListScene(student));
-            else if (option < offerings.size() + 1)  // Valid course selected
+            else if (option < offerings.size() + 1)  // Valid offering selected
                 AddToSchedule(offerings.get(option - 1));
             else  // Invalid input -> Retry()
-                Retry();
+                Retry(INVALID_OPTION_ERROR);
 
         } catch (InputMismatchException e) {
-            Retry();
+            Retry(INVALID_OPTION_ERROR);
         }
     }
 
-    void Retry() throws Exception {
-        System.out.print(INVALID_OPTION_ERROR);
+    void Retry(String _s) throws Exception {
+        System.out.println(_s);
         WaitForInput();
     }
-
-    void DrawBar(int _size, char _char) { System.out.println(String.valueOf(_char).repeat(_size)); }
-    void DrawInlineBar(int _size, char _char) { System.out.print(String.valueOf(_char).repeat(_size)); }
 }

@@ -34,7 +34,7 @@ public class Maps {
         List<CourseOffering> offerings = courseOfferings.get(_id);
 
         if (offerings == null)
-            throw new Exception("Could not find course using ID " + _id);
+            throw new Exception("Could not find courseOffering using ID " + _id);
 
         return offerings;
     }

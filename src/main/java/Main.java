@@ -16,7 +16,7 @@ public class Main {
     static final String COURSE_OFFERINGS_PATH = "courseOfferings.json";
     static final String DEGREES_PATH = "degrees.json";
     static final String STUDENTS_PATH = "students.json";
-    static final IScene INITIAL_SCENE = new LoginScene();
+    static final IScene INITIAL_SCENE = new LoginScene(null);
 
     static boolean isRunning = true;
 

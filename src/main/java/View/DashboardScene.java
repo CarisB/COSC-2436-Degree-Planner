@@ -2,6 +2,7 @@ package View;
 
 import Global.SceneManager;
 import Model.Student;
+import Helpers.UI;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -32,9 +33,16 @@ public class DashboardScene implements IScene {
     }
 
     void DisplayMenu() {
+        int barLength =
+                INFO_OPTION.length() +
+                        DEGREE_OPTION.length() +
+                        COURSE_LIST_OPTION.length() +
+                        LOGOUT_OPTION.length() +
+                        (OPTION_SEPARATOR.length() * 3);
+
         System.out.printf(WELCOME_MSG, student.getName());
         System.out.println();
-        DrawBar();
+        UI.DrawBar(barLength, '/');
         System.out.println(
                 INFO_OPTION +
                 OPTION_SEPARATOR +
@@ -43,19 +51,8 @@ public class DashboardScene implements IScene {
                 COURSE_LIST_OPTION +
                 OPTION_SEPARATOR +
                 LOGOUT_OPTION);
-        DrawBar();
+        UI.DrawBar(barLength, '/');
         System.out.print(INPUT_PROMPT);
-    }
-
-    void DrawBar() {
-        int barLength =
-                INFO_OPTION.length() +
-                DEGREE_OPTION.length() +
-                COURSE_LIST_OPTION.length() +
-                LOGOUT_OPTION.length() +
-                (OPTION_SEPARATOR.length() * 3);
-
-        System.out.println("=".repeat(barLength));
     }
 
     void WaitForInput() throws Exception {
@@ -68,7 +65,7 @@ public class DashboardScene implements IScene {
                 case 1 -> SceneManager.Next(new InfoScene(student));
                 case 2 -> SceneManager.Next(new DegreeScene(student));
                 case 3 -> SceneManager.Next(new CourseListScene(student));
-                case 4 -> SceneManager.Next(new LoginScene());
+                case 4 -> SceneManager.Next(new LoginScene(null));
                 default -> Retry();
             }
         } catch (InputMismatchException e) {

@@ -1,6 +1,18 @@
 {
   "students": [
     {
+      "id": 10000,
+      "name": "Christopher Baek",
+      "degreeId": 20001,
+      "transcript": [
+        { "id": 20001, "grade": 100 },
+        { "id": 20002, "grade": 100 },
+        { "id": 20003, "grade": 100 },
+        { "id": 30001, "grade": 98 },
+        { "id": 30002, "grade": 96 }
+      ]
+    },
+    {
       "id": 14581,
       "name": "Richard Torres",
       "degreeId": 40001,
