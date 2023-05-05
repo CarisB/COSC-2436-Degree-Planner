@@ -42,6 +42,7 @@ public class DashboardScene implements IScene {
 
         System.out.printf(WELCOME_MSG, student.getName());
         System.out.println();
+        System.out.println();
         UI.DrawBar(barLength, '/');
         System.out.println(
                 INFO_OPTION +
@@ -52,6 +53,7 @@ public class DashboardScene implements IScene {
                 OPTION_SEPARATOR +
                 LOGOUT_OPTION);
         UI.DrawBar(barLength, '/');
+        System.out.println();
         System.out.print(INPUT_PROMPT);
     }
 
