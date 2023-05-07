@@ -17,7 +17,7 @@
     {
       "id": 20002,
       "name": "Programming Fundamentals II",
-      "description": "The second course in programming fundamentals introduces the basic mathematical and programming principles",
+      "description": "The second course in programming fundamentals introduces the basic mathematical and programming principles.",
       "credits": 4,
       "prereqs": [ 20001 ]
     },
@@ -31,14 +31,14 @@
     {
       "id": 30001,
       "name": "Calculus I",
-      "description": "The first course in Calculus covers systematic study of mathematics begins with one of the following two alterna\u00ADtive sequences",
+      "description": "The first course in Calculus covers systematic study of mathematics begins with one of the following two alternative sequences.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 30002,
       "name": "Calculus II",
-      "description": "The second course in Calculus covers how to find the area under a curve and between two curves, which are solved using integrals",
+      "description": "The second course in Calculus covers how to find the area under a curve and between two curves, which are solved using integrals.",
       "credits": 4,
       "prereqs": [ 30001 ]
     },
@@ -52,28 +52,28 @@
     {
       "id": 10010,
       "name": "English I",
-      "description": "The first course in English helps students develop advanced reading, writing, and critical thinking skills",
+      "description": "The first course in English helps students develop advanced reading, writing, and critical thinking skills.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 10011,
       "name": "English II",
-      "description": "The Second course in English reinforces study skills, library skills, language usage, composition methods, reading competence, literature appreciation, vocabulary enrichment",
+      "description": "The second course in English reinforces study skills, library skills, language usage, composition methods, reading competence, literature appreciation, vocabulary enrichment.",
       "credits": 4,
       "prereqs": [ 10010 ]
     },
     {
       "id": 10012,
       "name": "English III",
-      "description": "The third course in English consists of advanced language usage, written compositions",
+      "description": "The third course in English consists of advanced language usage, written compositions.",
       "credits": 4,
       "prereqs": [ 10012 ]
     },
     {
       "id": 40010,
       "name": "Chemistry I",
-      "description": "The first course in Chemistry is a comprehensive overview of general chemistry topics, plus usually a little organic chemistry and biochemistry",
+      "description": "The first course in Chemistry is a comprehensive overview of general chemistry topics, plus usually a little organic chemistry and biochemistry.",
       "credits": 3,
       "prereqs": [ 40011 ]
     },
@@ -87,7 +87,7 @@
     {
       "id": 40020,
       "name": "Chemistry II",
-      "description": "The second course in Chemistry continues the development and application of concepts, theories, and laws underlying chemistry that were introduced",
+      "description": "The second course in Chemistry continues the development and application of concepts, theories, and laws underlying chemistry that were introduced.",
       "credits": 3,
       "prereqs": [ 40021 ]
     },
@@ -101,14 +101,14 @@
     {
       "id": 40030,
       "name": "Biology",
-      "description": "The first course in Biology studies the science behind living organisms",
+      "description": "The first course in Biology studies the science behind living organisms.",
       "credits": 3,
       "prereqs": [ 40031 ]
     },
     {
       "id": 40040,
       "name": "Biology II",
-      "description": "The second course in Biology continues the general study of life processes, emphasizing basic concepts of biology",
+      "description": "The second course in Biology continues the general study of life processes, emphasizing basic concepts of biology.",
       "credits": 3,
       "prereqs": [ 40041 ]
     },
@@ -129,14 +129,14 @@
     {
       "id": 40050,
       "name": "Physics",
-      "description": "The first course in Physics studies of the interactions between physical systems",
+      "description": "The first course in Physics studies of the interactions between physical systems.",
       "credits": 3,
       "prereqs": [ 40051 ]
     },
     {
       "id": 40060,
       "name": "Physics II",
-      "description": "The second course in Physics is algebra-based, introductory college-level physics course",
+      "description": "The second course in Physics is an algebra-based, introductory college-level physics course.",
       "credits": 3,
       "prereqs": [ 40061 ]
     },
@@ -157,28 +157,28 @@
     {
       "id": 40070,
       "name": "Psychology",
-      "description": "The first course in Psychology will introduce you to the fundamental principles of psychology and to the major subjects of psychological inquiry",
+      "description": "The first course in Psychology will introduce you to the fundamental principles of psychology and to the major subjects of psychological inquiry.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 40071,
       "name": "Psychology II",
-      "description": "The second course in Psychology is designed to meet scope and sequence requirements for the single-semester introduction to psychology course",
+      "description": "The second course in Psychology is designed to meet scope and sequence requirements for the single-semester introduction to psychology course.",
       "credits": 4,
       "prereqs": [ 40070 ]
     },
     {
       "id": 10010,
       "name": "Economics",
-      "description": "The first course in economics involves study of production and consumption",
+      "description": "The first course in economics involves study of production and consumption.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 10011,
       "name": "Economics II",
-      "description": "The second course in Economics involves the study of how the productive and distributive aspects of human life are organized",
+      "description": "The second course in Economics involves the study of how the productive and distributive aspects of human life are organized.",
       "credits": 4,
       "prereqs": [ 10010 ]
     },
@@ -192,42 +192,42 @@
     {
       "id": 70001,
       "name": "Criminology",
-      "description": "Course in criminal behavior.",
+      "description": "An introductory course in criminal behavior.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 70002,
       "name": "Courts and Social Policy",
-      "description": "Course in the court system.",
+      "description": "An introductory course in the court system.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 70003,
       "name": "Theories of Criminal Behavior",
-      "description": "Course in theories about criminal behavior represents the value in understanding and explaining individual factors and characteristics influencing the human intentions to commit crimes",
+      "description": "Course in theories about criminal behavior explaining individual factors and characteristics influencing the human intentions to commit crimes.",
       "credits": 4,
       "prereqs": [ 40070 ]
     },
     {
       "id": 50001,
       "name": "Music Appreciation",
-      "description": "Course in understanding of the value and merit of different styles of music",
+      "description": "Course in understanding of the value and merit of different styles of music.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 50020,
       "name": "Piano I",
-      "description": "First Course in learning the basics of playing the Piano",
+      "description": "First Course in learning the basics of playing the piano.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 50021,
       "name": "Piano II",
-      "description": "Second course in Piano.",
+      "description": "Second course in piano.",
       "credits": 4,
       "prereqs": [ 50020 ]
     },
@@ -241,28 +241,29 @@
     {
       "id": 50031,
       "name": "Guitar II",
-      "description": "Second course in guitar",
+      "description": "Second course in guitar.",
       "credits": 4,
       "prereqs": [ 50030 ]
     },
     {
       "id": 50040,
       "name": "Music History",
-      "description": "Course in the musical history of classical music from all parts of the world",
+      "description": "Course in the musical history of classical music from all parts of the world.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 40100,
       "name": "Art Appreciation",
-      "description": "Course in Art appreciation centers on the ability to view art throughout history, focusing on the cultures and the people, and how art developed in the specific periods",
+      "description": "Course in Art appreciation centers on the ability to view art throughout history, focusing on the cultures and the people, and how art developed in the specific periods.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 40101,
       "name": "Art History",
-      "description": "Course in Art History that focuses on the development of visual art, such as paintings, sculptures, engravings and drawings, in relation to historical events and eras",
+      "description": "Course in Art History that focuses on the development of visual art, such as paintings, sculptures, engravings and drawings, in relation to historical events and eras.",
+      "credits": 4,
       "prereqs": []
     },
     {
@@ -275,28 +276,28 @@
     {
       "id": 40202,
       "name": "Drawing II",
-      "description": "Second Course in drawing advances the skills taught in drawing 1.",
+      "description": "Second Course in drawing advances the skills taught in Drawing I.",
       "credits": 4,
       "prereqs": [ 40201 ]
     },
     {
       "id": 30004,
       "name": "College Algebra",
-      "description": "Introductory course in mathematics that prepares students for calculus or other advanced disciplines",
+      "description": "Introductory course in mathematics that prepares students for calculus or other advanced disciplines.",
       "credits": 4,
       "prereqs": []
     },
     {
       "id": 30005,
       "name": "Algebra II",
-      "description": "Second Course in algebra introduces higher grades topics such as evaluating equations and inequalities, etc",
+      "description": "Second Course in algebra introduces higher grades topics such as evaluating equations and inequalities, etc.",
       "credits": 4,
       "prereqs": [ 30004 ]
     },
     {
       "id": 30006,
       "name": "Geometry",
-      "description": "Course in geometry is a branch of mathematics that studies the sizes, shapes, positions, angles, and dimensions of things",
+      "description": "Course in geometry is a branch of mathematics that studies the sizes, shapes, positions, angles, and dimensions of things.",
       "credits": 3,
       "prereqs": []
     }
